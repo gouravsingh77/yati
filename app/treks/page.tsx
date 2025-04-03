@@ -119,7 +119,7 @@ export default function TreksPage() {
             {/* Khaliya Top Trek */}
             <Card className="overflow-hidden">
               <div className="relative h-48 w-full">
-                <Image src="/Khaliya.jpg?height=400&width=600" alt="Khaliya Top" fill className="object-cover" />
+                <Image src="/khaliya/Khaliya1.jpg?height=400&width=600" alt="Khaliya Top" fill className="object-cover" />
                 <Badge className="absolute top-3 left-3 z-10">Easy</Badge>
               </div>
               <CardHeader>
