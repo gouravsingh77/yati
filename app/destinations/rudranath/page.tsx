@@ -15,19 +15,19 @@ export default function RudranathPage() {
       "Trek to Rudranath, one of the Panch Kedar temples, where Lord Shiva's face is worshipped. Experience spiritual bliss amidst beautiful meadows and forests. This moderate trek takes you through dense forests, beautiful meadows, and remote villages to reach the sacred Rudranath temple, which is believed to be the place where Lord Shiva's face appeared.",
     image: "/himalayas.jpg?height=600&width=1200&text=Rudranath+Trek",
     gallery: [
-      "/placeholder.svg?height=400&width=600&text=Rudranath+Temple",
-      "/placeholder.svg?height=400&width=600&text=Panar+Bugyal",
-      "/placeholder.svg?height=400&width=600&text=Garhwal+Himalayas",
-      "/placeholder.svg?height=400&width=600&text=Trek+Route",
+      "/rudranath/rudranath1.jpeg?height=400&width=600&text=Rudranath+Temple",
+      "/rudranath/rudranath2.jpeg?height=400&width=600&text=Panar+Bugyal",
+      "/rudranath/rudranath3.jpeg?height=400&width=600&text=Garhwal+Himalayas",
+      "/rudranath/rudranath4.jpeg?height=400&width=600&text=Trek+Route",
     ],
     category: "Spiritual Trek",
     duration: "6 Days",
     difficulty: "Moderate",
     maxAltitude: "3,600m",
     bestSeason: "May to October",
-    startingPoint: "Sagar (near Gopeshwar)",
-    endingPoint: "Sagar",
-    price: 22999,
+    startingPoint: "Rishikesh",
+    endingPoint: "Rishikesh",
+    price: 11999,
     includes: [
       "Accommodation (guesthouses & camps)",
       "All meals during the trek",
@@ -119,19 +119,19 @@ export default function RudranathPage() {
     ],
     upcomingDepartures: [
       {
-        date: "July 20, 2024",
+        date: "May 15, 2025",
         spotsLeft: 4,
-        price: 22999,
+        price: 11999,
       },
       {
-        date: "August 15, 2024",
+        date: "June 1, 2025",
         spotsLeft: 8,
-        price: 22999,
+        price: 11999,
       },
       {
-        date: "September 10, 2024",
+        date: "September 10, 2025",
         spotsLeft: 10,
-        price: 22999,
+        price: 11999,
       },
     ],
   }
@@ -141,7 +141,7 @@ export default function RudranathPage() {
       {/* Hero Section */}
       <section className="relative h-[50vh] w-full">
         <Image
-          src={destination.image || "/placeholder.svg"}
+          src={destination.image || "/himalayas.jpg"}
           alt={destination.title}
           fill
           className="object-cover brightness-75"
@@ -307,7 +307,7 @@ export default function RudranathPage() {
                           <p className="text-sm text-muted-foreground">{departure.spotsLeft} spots left</p>
                         </div>
                         <Button asChild size="sm">
-                          <Link href={`/book/rudranath-${departure.date.toLowerCase().replace(/\s+/g, "-")}`}>
+                          <Link href={`/book/rudranath${departure.date.toLowerCase().replace(/\s+/g, "-")}`}>
                             Book Now
                           </Link>
                         </Button>
@@ -435,7 +435,7 @@ export default function RudranathPage() {
             <div className="flex flex-col items-center">
               <div className="bg-white p-4 rounded-lg shadow-md mb-4">
                 <Image
-                  src="/placeholder.svg?height=300&width=300&text=Google+Pay+QR"
+                  src="/qr.png?height=300&width=300&text=Google+Pay+QR"
                   alt="Google Pay QR Code"
                   width={250}
                   height={250}
@@ -450,110 +450,118 @@ export default function RudranathPage() {
         </div>
       </section>
 
-      {/* Similar Destinations */}
-      <section className="py-16">
-        <div className="container px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Similar Destinations</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">Explore other spiritual journeys in the Himalayas</p>
-          </div>
+     {/* Similar Destinations */}
+<section className="py-16">
+  <div className="container px-4">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl font-bold mb-4">More Sacred Himalayan Journeys</h2>
+      <p className="text-muted-foreground max-w-2xl mx-auto">
+        Explore divine Shiva pilgrimages in the Garhwal Himalayas
+      </p>
+    </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Card className="overflow-hidden">
-              <div className="relative h-48 w-full">
-                <Image
-                  src="/placeholder.svg?height=400&width=600&text=Adi+Kailash"
-                  alt="Adi Kailash"
-                  fill
-                  className="object-cover"
-                />
-                <Badge className="absolute top-3 left-3 z-10">Spiritual Journey</Badge>
-              </div>
-              <CardHeader>
-                <CardTitle>Adi Kailash & Om Parvat</CardTitle>
-                <CardDescription>A sacred pilgrimage to the divine abode of Lord Shiva</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center gap-2 mb-4">
-                  <Clock className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-sm">9 Days</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <p className="font-semibold">₹32,999</p>
-                  <Badge variant="outline">Moderate</Badge>
-                </div>
-              </CardContent>
-              <CardFooter>
-                <Button asChild className="w-full">
-                  <Link href="/destinations/adi-kailash">View Details</Link>
-                </Button>
-              </CardFooter>
-            </Card>
-
-            <Card className="overflow-hidden">
-              <div className="relative h-48 w-full">
-                <Image
-                  src="/placeholder.svg?height=400&width=600&text=Kedarnath"
-                  alt="Kedarnath"
-                  fill
-                  className="object-cover"
-                />
-                <Badge className="absolute top-3 left-3 z-10">Pilgrimage</Badge>
-              </div>
-              <CardHeader>
-                <CardTitle>Kedarnath Yatra</CardTitle>
-                <CardDescription>Trek to one of the holiest shrines of Lord Shiva</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center gap-2 mb-4">
-                  <Clock className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-sm">5 Days</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <p className="font-semibold">₹21,999</p>
-                  <Badge variant="outline">Moderate</Badge>
-                </div>
-              </CardContent>
-              <CardFooter>
-                <Button asChild className="w-full">
-                  <Link href="/destinations/kedarnath">View Details</Link>
-                </Button>
-              </CardFooter>
-            </Card>
-
-            <Card className="overflow-hidden">
-              <div className="relative h-48 w-full">
-                <Image
-                  src="/placeholder.svg?height=400&width=600&text=Kailash+Mansarovar"
-                  alt="Kailash Mansarovar"
-                  fill
-                  className="object-cover"
-                />
-                <Badge className="absolute top-3 left-3 z-10">Premium</Badge>
-              </div>
-              <CardHeader>
-                <CardTitle>Kailash Mansarovar Yatra</CardTitle>
-                <CardDescription>The ultimate pilgrimage to Mount Kailash and Lake Mansarovar</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center gap-2 mb-4">
-                  <Clock className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-sm">15 Days</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <p className="font-semibold">₹1,25,000</p>
-                  <Badge variant="outline">Challenging</Badge>
-                </div>
-              </CardContent>
-              <CardFooter>
-                <Button asChild className="w-full">
-                  <Link href="/destinations/kailash-mansarovar">View Details</Link>
-                </Button>
-              </CardFooter>
-            </Card>
-          </div>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <Card className="overflow-hidden">
+        <div className="relative h-48 w-full">
+          <Image
+            src="/rudranath/tungnath.jpeg?height=400&width=600&text=Tungnath+Temple"
+            alt="Tungnath Temple"
+            fill
+            className="object-cover"
+          />
+          <Badge className="absolute top-3 left-3 z-10">Highest Shiva Temple</Badge>
         </div>
-      </section>
+        <CardHeader>
+          <CardTitle>Tungnath, Chandrashila</CardTitle>
+          <CardDescription>
+            World's highest Shiva temple at 3,680m in the Chandrashila range
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="flex items-center gap-2 mb-4">
+            <Clock className="h-4 w-4 text-muted-foreground" />
+            <span className="text-sm">3 Days</span>
+          </div>
+          <div className="flex items-center justify-between">
+            <p className="font-semibold">₹7,999</p>
+            <Badge variant="outline">Moderate</Badge>
+          </div>
+        </CardContent>
+        <CardFooter>
+          <Button asChild className="w-full">
+            <Link href="https://wa.me/919259071008?text=I'm%20interested%20in%20Tungnath%20Dham%20Yatra%20and%20would%20like%20to%20know%20more%20details">Know More</Link>
+          </Button>
+        </CardFooter>
+      </Card>
+
+      <Card className="overflow-hidden">
+        <div className="relative h-48 w-full">
+          <Image
+            src="/rudranath/madhyamaheshwar.jpeg?height=400&width=600&text=Madhyamaheshwar+Temple"
+            alt="Madhyamaheshwar Temple"
+            fill
+            className="object-cover"
+          />
+          <Badge className="absolute top-3 left-3 z-10">Panch Kedar</Badge>
+        </div>
+        <CardHeader>
+          <CardTitle>Madhyamaheshwar</CardTitle>
+          <CardDescription>
+            Where Lord Shiva's navel appeared, nestled at 3,497m in Garhwal
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="flex items-center gap-2 mb-4">
+            <Clock className="h-4 w-4 text-muted-foreground" />
+            <span className="text-sm">4 Days</span>
+          </div>
+          <div className="flex items-center justify-between">
+            <p className="font-semibold">₹9,999</p>
+            <Badge variant="outline">Moderate</Badge>
+          </div>
+        </CardContent>
+        <CardFooter>
+          <Button asChild className="w-full">
+            <Link href="https://wa.me/919259071008?text=I'm%20interested%20in%20Madhyamaheshwar%20Yatra%20and%20would%20like%20to%20know%20more%20details">Know More</Link>
+          </Button>
+        </CardFooter>
+      </Card>
+
+      <Card className="overflow-hidden">
+        <div className="relative h-48 w-full">
+          <Image
+            src="/rudranath/kalpeshwar.jpeg?height=400&width=600&text=Kaleshwar+Temple"
+            alt="Kalpeshwar Temple"
+            fill
+            className="object-cover"
+          />
+          <Badge className="absolute top-3 left-3 z-10">Panch Kedar</Badge>
+        </div>
+        <CardHeader>
+          <CardTitle>Kalpeshwar Mahadev</CardTitle>
+          <CardDescription>
+            Ancient Shiva temple with natural lingam nestled in Garhwal
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="flex items-center gap-2 mb-4">
+            <Clock className="h-4 w-4 text-muted-foreground" />
+            <span className="text-sm">3 Days</span>
+          </div>
+          <div className="flex items-center justify-between">
+            <p className="font-semibold">₹6,999</p>
+            <Badge variant="outline">Easy</Badge>
+          </div>
+        </CardContent>
+        <CardFooter>
+          <Button asChild className="w-full">
+            <Link href="https://wa.me/919259071008?text=I'm%20interested%20in%20Kalpeshwar%20Mahadev%20Yatra%20and%20would%20like%20to%20know%20more%20details">Know More</Link>
+          </Button>
+        </CardFooter>
+      </Card>
+    </div>
+  </div>
+</section>
 
       {/* CTA Section */}
       <section className="py-16 bg-primary text-primary-foreground">

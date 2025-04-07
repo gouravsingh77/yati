@@ -24,7 +24,7 @@ export default function BlogDetailPage({ params }: { params: { slug: string } })
       },
       {
         type: "image",
-        url: "/adi1.jpg?height=600&width=1200",
+        url: "/adi/omparvat.jpg?height=600&width=1200",
         alt: "Om Parvat with natural Om formation",
         caption: "The natural Om formation on Om Parvat, visible when covered with snow",
       },
@@ -54,7 +54,7 @@ export default function BlogDetailPage({ params }: { params: { slug: string } })
       },
       {
         type: "image",
-        url: "/adi/adi2.jpg?height=600&width=1200",
+        url: "/adi/adikailash.jpg?height=600&width=1200",
         alt: "Trekking route to Adi Kailash",
         caption: "The scenic trekking route to Adi Kailash through pristine valleys and forests",
       },
@@ -107,17 +107,17 @@ export default function BlogDetailPage({ params }: { params: { slug: string } })
       {
         title: "Essential Packing List for Himalayan Treks",
         slug: "essential-packing-list",
-        image: "/pawan.png?height=400&width=600",
+        image: "/team/pawan.png?height=400&width=600",
       },
       {
         title: "The Mystical Panch Kedar: A Spiritual Circuit",
         slug: "mystical-panch-kedar",
-        image: "/rahul.jpg?height=400&width=600",
+        image: "/client/rahul.jpg?height=400&width=600",
       },
       {
         title: "Understanding Altitude Sickness: Prevention and Treatment",
         slug: "understanding-altitude-sickness",
-        image: "/priya.jpg?height=400&width=600",
+        image: "/client/priya.jpg?height=400&width=600",
       },
     ],
   }
@@ -175,7 +175,7 @@ export default function BlogDetailPage({ params }: { params: { slug: string } })
                     return (
                       <figure key={index} className="my-8">
                         <div className="relative h-[400px] w-full rounded-lg overflow-hidden">
-                          <Image src={block.url || "/placeholder.svg"} alt={block.alt} fill className="object-cover" />
+                          <Image src={block.url || "/himalayas.jpg"} alt={block.alt} fill className="object-cover" />
                         </div>
                         {block.caption && (
                           <figcaption className="text-center text-sm text-muted-foreground mt-2">
@@ -196,7 +196,7 @@ export default function BlogDetailPage({ params }: { params: { slug: string } })
                     <div className="flex flex-wrap gap-2">
                       {article.tags.map((tag, index) => (
                         <Badge key={index} variant="outline" className="hover:bg-primary/10">
-                          <Link href={`/blog/tag/${tag.toLowerCase().replace(/\s+/g, "-")}`}>{tag}</Link>
+                          <Link href={`/blog${tag.toLowerCase().replace(/\s+/g, "-")}`}>{tag}</Link>
                         </Badge>
                       ))}
                     </div>

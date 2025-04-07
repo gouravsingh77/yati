@@ -1,7 +1,9 @@
+"use client" // Required for client-side components like Tabs
+
 import Image from "next/image"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Button } from "@/components/ui/button" // Make sure you import Button
 
 export default function GalleryPage() {
   return (
@@ -9,7 +11,7 @@ export default function GalleryPage() {
       {/* Hero Section */}
       <section className="relative h-[50vh] w-full">
         <Image
-          src="/himalayas.jpg?height=800&width=1600"
+          src="/himalayas.jpg"
           alt="Himalayan Mountains"
           fill
           className="object-cover brightness-75"
@@ -37,185 +39,41 @@ export default function GalleryPage() {
               </TabsList>
             </div>
 
-            <TabsContent value="all">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {Array.from({ length: 12 }).map((_, i) => (
-                  <div key={i} className="relative aspect-square overflow-hidden rounded-lg">
-                    <Image
-                      src={`/khaliya.jpg?height=600&width=600&text=Gallery+Image+${i + 1}`}
-                      alt={`Gallery Image ${i + 1}`}
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                ))}
-              </div>
-            </TabsContent>
-
-            <TabsContent value="spiritual">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {Array.from({ length: 8 }).map((_, i) => (
-                  <div key={i} className="relative aspect-square overflow-hidden rounded-lg">
-                    <Image
-                      src={`/adi/adi2.jpg?height=600&width=600&text=Spiritual+Image+${i + 1}`}
-                      alt={`Spiritual Image ${i + 1}`}
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                ))}
-              </div>
-            </TabsContent>
-
-            <TabsContent value="adventure">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {Array.from({ length: 8 }).map((_, i) => (
-                  <div key={i} className="relative aspect-square overflow-hidden rounded-lg">
-                    <Image
-                      src={`/rudranath.jpg?height=600&width=600&text=Adventure+Image+${i + 1}`}
-                      alt={`Adventure Image ${i + 1}`}
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                ))}
-              </div>
-            </TabsContent>
-
-            <TabsContent value="culture">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {Array.from({ length: 8 }).map((_, i) => (
-                  <div key={i} className="relative aspect-square overflow-hidden rounded-lg">
-                    <Image
-                      src={`/pawan.png?height=600&width=600&text=Culture+Image+${i + 1}`}
-                      alt={`Culture Image ${i + 1}`}
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                ))}
-              </div>
-            </TabsContent>
+            {/* Tab Contents */}
+            {[
+              { value: "all", images: ["/khaliya/khaliya.jpg", "/adi/adi2.jpg", "/rudranath/rudranath.jpg", "/nanda/nanda.jpeg",
+                 "/pindari/pindari1.jpeg", "/panchachuli/panchachuli.jpeg", "/ranthan/ranthan.jpeg", "/milam/milam.jpeg"] },
+              {
+                value: "spiritual",
+                images: ["/adi/adi1.jpg", "/char/badrinath.jpeg", "/char/Gangotri.jpeg", "/char/kedarnath1.jpeg"],
+              },
+              {
+                value: "adventure",
+                images: ["/ralam/ralam4.jpeg", "/nanda/nanda1.jpeg", "/milam/milam1.jpg", "/nanda/nanda3.jpeg"],
+              },
+              {
+                value: "culture",
+                images: ["/nanda/nanda2.jpeg", "/nanda/nanda4.jpg", "/panchachuli/panchachuli1.jpeg", "/panchachuli/panchachuli4.jpeg"],
+              },
+            ].map(({ value, images }) => (
+              <TabsContent key={value} value={value}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                  {images.map((src, i) => (
+                    <div key={i} className="relative aspect-square overflow-hidden rounded-lg">
+                      <Image
+                        src={src}
+                        alt={`${value} image ${i + 1}`}
+                        fill
+                        className="object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </TabsContent>
+            ))}
           </Tabs>
         </div>
       </section>
-
-      {/* Video Gallery 
-      <section className="py-16 bg-muted">
-        <div className="container px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Video Gallery</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Experience the Himalayas in motion through our collection of videos
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-card rounded-lg overflow-hidden border">
-              <div className="relative h-48 w-full">
-                <Image
-                  src="/placeholder.svg?height=400&width=600&text=Adi+Kailash+Video"
-                  alt="Adi Kailash Video"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="h-16 w-16 rounded-full bg-primary/90 flex items-center justify-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-8 w-8 text-white"
-                    >
-                      <polygon points="5 3 19 12 5 21 5 3" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div className="p-4">
-                <h3 className="font-semibold mb-1">Adi Kailash & Om Parvat Journey</h3>
-                <p className="text-sm text-muted-foreground">Experience the divine energy of this sacred pilgrimage</p>
-              </div>
-            </div>
-
-            <div className="bg-card rounded-lg overflow-hidden border">
-              <div className="relative h-48 w-full">
-                <Image
-                  src="/placeholder.svg?height=400&width=600&text=Milam+Glacier+Video"
-                  alt="Milam Glacier Video"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="h-16 w-16 rounded-full bg-primary/90 flex items-center justify-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-8 w-8 text-white"
-                    >
-                      <polygon points="5 3 19 12 5 21 5 3" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div className="p-4">
-                <h3 className="font-semibold mb-1">Milam Glacier Trek</h3>
-                <p className="text-sm text-muted-foreground">
-                  Journey through pristine valleys to this magnificent glacier
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-card rounded-lg overflow-hidden border">
-              <div className="relative h-48 w-full">
-                <Image
-                  src="/placeholder.svg?height=400&width=600&text=Cultural+Video"
-                  alt="Cultural Video"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="h-16 w-16 rounded-full bg-primary/90 flex items-center justify-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-8 w-8 text-white"
-                    >
-                      <polygon points="5 3 19 12 5 21 5 3" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div className="p-4">
-                <h3 className="font-semibold mb-1">Cultural Experiences in Uttarakhand</h3>
-                <p className="text-sm text-muted-foreground">
-                  Discover the rich cultural heritage of the Himalayan communities
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>*/}
 
       {/* Share Your Photos */}
       <section className="py-16">
@@ -228,7 +86,9 @@ export default function GalleryPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg">
-                <Link href="https://drive.google.com/drive/folders/1an2mnJDXvIyKgFqLt6QRIlWBSTMQn06A?usp=sharing">Share Your Photos</Link>
+                <Link href="https://drive.google.com/drive/folders/1an2mnJDXvIyKgFqLt6QRIlWBSTMQn06A?usp=sharing">
+                  Share Your Photos
+                </Link>
               </Button>
               <Button asChild variant="outline" size="lg">
                 <Link
@@ -286,4 +146,3 @@ export default function GalleryPage() {
     </div>
   )
 }
-

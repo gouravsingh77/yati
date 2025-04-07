@@ -184,11 +184,11 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-card rounded-lg overflow-hidden border">
               <div className="relative h-64 w-full">
-                <Image src="/gourav.jpg?height=400&width=400" alt="Team Member" fill className="object-cover" />
+                <Image src="/team/gourav.jpg?height=400&width=400" alt="Team Member" fill className="object-cover" />
               </div>
               <div className="p-6 text-center">
                 <h3 className="text-xl font-semibold mb-1">Gourav Singh</h3>
-                <p className="text-primary mb-3">Founder & Operations</p>
+                <p className="text-primary mb-3">Co-Founder & Operations</p>
                 <p className="text-muted-foreground mb-4">
                   Born and raised in the mountains, Gourav has over a years of experience leading treks and spiritual
                   journeys.
@@ -198,27 +198,63 @@ export default function AboutPage() {
 
             <div className="bg-card rounded-lg overflow-hidden border">
               <div className="relative h-64 w-full">
-                <Image src="/pawan.png?height=400&width=400" alt="Team Member" fill className="object-cover" />
+                <Image src="/team/pawan.png?height=400&width=400" alt="Team Member" fill className="object-cover" />
               </div>
               <div className="p-6 text-center">
                 <h3 className="text-xl font-semibold mb-1">Pawan Mehra</h3>
-                <p className="text-primary mb-3">Lead Guide</p>
+                <p className="text-primary mb-3"> Strategy Head & Expedition Planner </p>
                 <p className="text-muted-foreground mb-4">
-                  With her attention to detail and organizational skills, Pawan ensures that every journey runs
-                  smoothly.
+                With a vision to blend adventure and spirituality, Pawan strategizes and plans Yati Dham’s growth, making every journey impactful and unforgettable.
+                </p>
+              </div>
+            </div>
+            <div className="bg-card rounded-lg overflow-hidden border">
+              <div className="relative h-64 w-full">
+                <Image src="/team/varsha.png?height=400&width=400" alt="Team Member" fill className="object-cover" />
+              </div>
+              <div className="p-6 text-center">
+                <h3 className="text-xl font-semibold mb-1">Varsha Negi</h3>
+                <p className="text-primary mb-3">Marketing Head</p>
+                <p className="text-muted-foreground mb-4">
+                The mastermind behind our branding and outreach, Varsha ensures Yati Dham reaches travel enthusiasts looking for soulful and thrilling experiences.
                 </p>
               </div>
             </div>
 
+
             <div className="bg-card rounded-lg overflow-hidden border">
               <div className="relative h-64 w-full">
-                <Image src="/rohit.png?height=400&width=400" alt="Team Member" fill className="object-cover" />
+                <Image src="/team/rohit.png?height=400&width=400" alt="Team Member" fill className="object-cover" />
               </div>
               <div className="p-6 text-center">
                 <h3 className="text-xl font-semibold mb-1">Rohit</h3>
-                <p className="text-primary mb-3"> Trek Guide</p>
+                <p className="text-primary mb-3"> Logistics & Ground Support</p>
                 <p className="text-muted-foreground mb-4">
-                  An expert mountaineer with deep knowledge of the Himalayan trails and local ecology.
+                From accommodation to transport, Rohit makes sure everything runs smoothly so travelers can focus on their journey.
+                </p>
+              </div>
+            </div>
+            <div className="bg-card rounded-lg overflow-hidden border">
+              <div className="relative h-64 w-full">
+                <Image src="/client/1.jpg?height=400&width=400" alt="Team Member" fill className="object-cover" />
+              </div>
+              <div className="p-6 text-center">
+                <h3 className="text-xl font-semibold mb-1">Kuldeep Karki</h3>
+                <p className="text-primary mb-3"> Trek & Expedition Leader</p>
+                <p className="text-muted-foreground mb-4">
+                An expert in high-altitude treks, Kuldeep leads groups with confidence, ensuring safety, adventure, and an immersive experience in the Himalayas.
+                </p>
+              </div>
+            </div>
+            <div className="bg-card rounded-lg overflow-hidden border">
+              <div className="relative h-64 w-full">
+                <Image src="/client/2.jpg?height=400&width=400" alt="Team Member" fill className="object-cover" />
+              </div>
+              <div className="p-6 text-center">
+                <h3 className="text-xl font-semibold mb-1">Rahul </h3>
+                <p className="text-primary mb-3">Trek Leader & Guide </p>
+                <p className="text-muted-foreground mb-4">
+                A seasoned trekker with vast knowledge of the terrain, Rahul brings passion and expertise to every journey. His guidance ensures safety, adventure, and an unforgettable experience.
                 </p>
               </div>
             </div>

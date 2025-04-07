@@ -83,7 +83,7 @@ export default function TreksPage() {
             <Card className="overflow-hidden">
               <div className="relative h-48 w-full">
                 <Image src="/milam/milamglacier.jpg?height=400&width=600" alt="Milam Glacier" fill className="object-cover" />
-                <Badge className="absolute top-3 left-3 z-10">Challenging</Badge>
+                <Badge className="absolute top-3 left-3 z-10">Moderate</Badge>
               </div>
               <CardHeader>
                 <CardTitle>Milam Glacier Trek</CardTitle>
@@ -101,7 +101,7 @@ export default function TreksPage() {
                   </div>
                   <div className="flex items-center gap-2">
                     <Mountain className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-sm">Max Altitude: 3,870m | Difficulty: Challenging</span>
+                    <span className="text-sm">Max Altitude: 3,870m | Difficulty: Moderate</span>
                   </div>
                 </div>
                 <div className="flex items-center justify-between">
@@ -158,7 +158,7 @@ export default function TreksPage() {
             {/* Nanda Devi Base Camp */}
             <Card className="overflow-hidden">
               <div className="relative h-48 w-full">
-              <Image src="/nandadevi.jpg?height=400&width=600" alt="Nanda Devi" fill className="object-cover" />
+              <Image src="/nanda/nanda.jpeg?height=400&width=600" alt="Nanda Devi" fill className="object-cover" />
                 <Badge className="absolute top-3 left-3 z-10">Expedition</Badge>
               </div>
               <CardHeader>
@@ -183,10 +183,10 @@ export default function TreksPage() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-sm text-muted-foreground">Starting from</p>
-                    <p className="text-2xl font-bold">₹14,999</p>
+                    <p className="text-2xl font-bold">₹15,999</p>
                   </div>
                   <Button asChild>
-                    <Link href="/destinations/nanda">View Details</Link>
+                    <Link href="/destinations/nanda-devi">View Details</Link>
                   </Button>
                 </div>
               </CardContent>
@@ -230,11 +230,11 @@ export default function TreksPage() {
                   </li>
                   <li className="flex items-center gap-2">
                     <ArrowRight className="h-4 w-4 text-primary" />
-                    <span>Pindari Glacier Trek (5 days)</span>
+                    <span>Pindari Glacier Trek (7 days)</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <ArrowRight className="h-4 w-4 text-primary" />
-                    <span>Valley of Flowers Trek (4 days)</span>
+                    <span>Tungnath (Chandrashila) Trek (5 days)</span>
                   </li>
                 </ul>
               </CardContent>
@@ -292,7 +292,7 @@ export default function TreksPage() {
                   </li>
                   <li className="flex items-center gap-2">
                     <ArrowRight className="h-4 w-4 text-primary" />
-                    <span>Nanda Devi Base Camp (8 days)</span>
+                    <span>Nanda Devi Base Camp (6 days)</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <ArrowRight className="h-4 w-4 text-primary" />
@@ -462,7 +462,7 @@ export default function TreksPage() {
                 className="border-white text-white hover:bg-white hover:text-primary"
               >
                 <Link
-                  href="https://wa.me/919876543210?text=I'm%20interested%20in%20booking%20a%20trek"
+                  href="https://wa.me/919259071008?text=I'm%20interested%20in%20booking%20a%20trek"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

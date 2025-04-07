@@ -45,7 +45,7 @@ export default function DestinationsPage() {
                 <Card className="overflow-hidden">
                   <div className="relative h-48 w-full">
                     <Image
-                      src="/adi1.jpg?height=400&width=600"
+                      src="/adi/adi1.jpg?height=400&width=600"
                       alt="Adi Kailash"
                       fill
                       className="object-cover"
@@ -134,12 +134,101 @@ export default function DestinationsPage() {
                     </Button>
                   </CardFooter>
                 </Card>
+                 {/* Char Dham */}
+                 <Card className="overflow-hidden">
+                  <div className="relative h-48 w-full">
+                    <Image
+                      src="/char/chardham.jpg?height=400&width=600"
+                      alt="Kailash Darshan"
+                      fill
+                      className="object-cover"
+                    />
+                    <Badge className="absolute top-3 left-3 z-10">Spiritual Journey</Badge>
+                  </div>
+                  <CardHeader>
+                    <CardTitle>Char Dham Yatra 2025</CardTitle>
+                    <CardDescription>View the sacred Yatra in Himalayas</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid grid-cols-2 gap-4 mb-4">
+                      <div className="flex items-center gap-2">
+                        <Clock className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm">10 Days</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Mountain className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm">Moderate</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Calendar className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm">Jun-Sep</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <MapPin className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm">Uttarakhand</span>
+                      </div>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-4">
+                    The Char Dham Yatra is one of the most sacred pilgrimage circuits in India, comprising four holy sites nestled in the Garhwal Himalayas.
+                    </p>
+                  </CardContent>
+                  <CardFooter>
+                    <Button asChild className="w-full">
+                      <Link href="/destinations/char-dham">View Details</Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+                 {/* Temples of Manaskhand */}
+                 <Card className="overflow-hidden">
+                  <div className="relative h-48 w-full">
+                    <Image
+                      src="/manaskhand/manaskhand.jpeg?height=400&width=600"
+                      alt="manaskhand"
+                      fill
+                      className="object-cover"
+                    />
+                    <Badge className="absolute top-3 left-3 z-10">Spiritual Journey</Badge>
+                  </div>
+                  <CardHeader>
+                    <CardTitle>Temples of Manaskhand</CardTitle>
+                    <CardDescription>View the sacred Yatra in Himalayas</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid grid-cols-2 gap-4 mb-4">
+                      <div className="flex items-center gap-2">
+                        <Clock className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm">7 Days</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Mountain className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm">Moderate</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Calendar className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm">Jun-Sep</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <MapPin className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm">Uttarakhand</span>
+                      </div>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-4">
+                    Manaskhand region of Kumaon Himalayas is home to some of India's most ancient and powerful temples.
+                     This spiritual journey takes you through mystical caves, sacred shrines, and energy centers
+                    </p>
+                  </CardContent>
+                  <CardFooter>
+                    <Button asChild className="w-full">
+                      <Link href="/destinations/manaskhand">View Details</Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
 
                 {/* Rudranath Trek */}
                 <Card className="overflow-hidden">
                   <div className="relative h-48 w-full">
                     <Image
-                      src="/rudranath.jpg?height=400&width=600"
+                      src="/rudranath/rudranath.jpg?height=400&width=600"
                       alt="Rudranath Trek"
                       fill
                       className="object-cover"
@@ -156,7 +245,7 @@ export default function DestinationsPage() {
                     <div className="grid grid-cols-2 gap-4 mb-4">
                       <div className="flex items-center gap-2">
                         <Clock className="h-4 w-4 text-muted-foreground" />
-                        <span className="text-sm">5 Days</span>
+                        <span className="text-sm">6 Days</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <Mountain className="h-4 w-4 text-muted-foreground" />
@@ -187,7 +276,7 @@ export default function DestinationsPage() {
                 <Card className="overflow-hidden">
                   <div className="relative h-48 w-full">
                     <Image
-                      src="/khaliya.jpg?height=400&width=600"
+                      src="/khaliya/khaliya.jpg?height=400&width=600"
                       alt="Khaliya Top"
                       fill
                       className="object-cover"
@@ -231,11 +320,153 @@ export default function DestinationsPage() {
                   </CardFooter>
                 </Card>
 
+                {/* Panchachuli Base Camp  */}
+                <Card className="overflow-hidden">
+                  <div className="relative h-48 w-full">
+                    <Image
+                      src="/Panchachuli/Panchachuli1.jpeg?height=400&width=600"
+                      alt="Panchachuli"
+                      fill
+                      className="object-cover"
+                    />
+                    <Badge className="absolute top-3 left-3 z-10">Adventure Trek</Badge>
+                  </div>
+                  <CardHeader>
+                    <CardTitle>Panchachuli Base Camp Trek</CardTitle>
+                    <CardDescription>
+                    Witness the majestic five-peaked Panchachuli massif from its pristine base camp, nestled in the heart of Kumaon's Darma Valley.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid grid-cols-2 gap-4 mb-4">
+                      <div className="flex items-center gap-2">
+                        <Clock className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm">5 Days</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Mountain className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm">Easy</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Calendar className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm">Year-round</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <MapPin className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm">Uttarakhand</span>
+                      </div>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-4">
+                    This unforgettable trek takes you through lush alpine meadows, charming Bhotia villages, and rhododendron forests,
+                     offering breathtaking views of Himalayans
+                    </p>
+                  </CardContent>
+                  <CardFooter>
+                    <Button asChild className="w-full">
+                      <Link href="/destinations/panchachuli">View Details</Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+                {/* Ralam Glacier */}
+                <Card className="overflow-hidden">
+                  <div className="relative h-48 w-full">
+                    <Image
+                      src="/Ralam/Ralam.jpeg?height=400&width=600"
+                      alt="Khaliya Top"
+                      fill
+                      className="object-cover"
+                    />
+                    <Badge className="absolute top-3 left-3 z-10">Adventure Trek</Badge>
+                  </div>
+                  <CardHeader>
+                    <CardTitle>Ralam Glacier Trek</CardTitle>
+                    <CardDescription>
+                    Experience the breathtaking beauty of one of Kumaon's most spectacular glaciers
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid grid-cols-2 gap-4 mb-4">
+                      <div className="flex items-center gap-2">
+                        <Clock className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm">7 Days</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Mountain className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm">Easy</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Calendar className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm">Year-round</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <MapPin className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm">Uttarakhand</span>
+                      </div>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-4">
+                    The Ralam Glacier trek takes you through pristine alpine meadows, dense rhododendron forests, and traditional Himalayan villages.
+                     Marvel at panoramic views of Himalayan giants like Nanda Devi, Nanda Kot, and Hardeol.
+                    </p>
+                  </CardContent>
+                  <CardFooter>
+                    <Button asChild className="w-full">
+                      <Link href="/destinations/ralam-dhura">View Details</Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+                {/* Ranthan khrak  */}
+                <Card className="overflow-hidden">
+                  <div className="relative h-48 w-full">
+                    <Image
+                      src="/Ranthan/Ranthan.jpeg?height=400&width=600"
+                      alt="Ranthan"
+                      fill
+                      className="object-cover"
+                    />
+                    <Badge className="absolute top-3 left-3 z-10">Adventure Trek</Badge>
+                  </div>
+                  <CardHeader>
+                    <CardTitle>Ranthan Khrak Trek</CardTitle>
+                    <CardDescription>
+                    Discover the serene beauty of Ranthan Khark, a picturesque alpine meadow nestled in the Kumaon Himalayas.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid grid-cols-2 gap-4 mb-4">
+                      <div className="flex items-center gap-2">
+                        <Clock className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm">5 Days</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Mountain className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm">Easy</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Calendar className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm">Year-round</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <MapPin className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm">Uttarakhand</span>
+                      </div>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-4">
+                    This gentle trek offers stunning 360-degree views of snow-capped peaks including 
+                    Nanda Devi, Trishul, and Nanda Kot. Perfect for beginners and nature lovers.
+                    </p>
+                  </CardContent>
+                  <CardFooter>
+                    <Button asChild className="w-full">
+                      <Link href="/destinations/ranthan-khrak">View Details</Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+
                 {/* Pindari Glacier */}
                 <Card className="overflow-hidden">
                   <div className="relative h-48 w-full">
                     <Image
-                      src="/pindari.jpeg?height=400&width=600"
+                      src="/pindari/pindari.jpeg?height=400&width=600"
                       alt="Pindari Glacier"
                       fill
                       className="object-cover"
@@ -274,7 +505,7 @@ export default function DestinationsPage() {
                   </CardContent>
                   <CardFooter>
                     <Button asChild className="w-full">
-                      <Link href="/destinations/pindari">View Details</Link>
+                      <Link href="/destinations/pindari-glacier">View Details</Link>
                     </Button>
                   </CardFooter>
                 </Card>
@@ -283,7 +514,7 @@ export default function DestinationsPage() {
                 <Card className="overflow-hidden">
                   <div className="relative h-48 w-full">
                     <Image
-                      src="/nandadevi.jpg?height=400&width=600"
+                      src="/nanda/nanda.jpeg?height=400&width=600"
                       alt="Nanda Devi Base Camp"
                       fill
                       className="object-cover"
@@ -298,7 +529,7 @@ export default function DestinationsPage() {
                     <div className="grid grid-cols-2 gap-4 mb-4">
                       <div className="flex items-center gap-2">
                         <Clock className="h-4 w-4 text-muted-foreground" />
-                        <span className="text-sm">8 Days</span>
+                        <span className="text-sm">6 Days</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <Mountain className="h-4 w-4 text-muted-foreground" />
@@ -320,7 +551,7 @@ export default function DestinationsPage() {
                   </CardContent>
                   <CardFooter>
                     <Button asChild className="w-full">
-                      <Link href="/destinations/nanda">View Details</Link>
+                      <Link href="/destinations/nanda-devi">View Details</Link>
                     </Button>
                   </CardFooter>
                 </Card>
@@ -333,7 +564,7 @@ export default function DestinationsPage() {
                 <Card className="overflow-hidden">
                   <div className="relative h-48 w-full">
                     <Image
-                      src="/adikailash.jpg?height=400&width=600"
+                      src="/adi/adikailash.jpg?height=400&width=600"
                       alt="Adi Kailash"
                       fill
                       className="object-cover"
@@ -374,12 +605,101 @@ export default function DestinationsPage() {
                     </Button>
                   </CardFooter>
                 </Card>
+                {/* Char Dham */}
+                <Card className="overflow-hidden">
+                  <div className="relative h-48 w-full">
+                    <Image
+                      src="/char/chardham.jpg?height=400&width=600"
+                      alt="Kailash Darshan"
+                      fill
+                      className="object-cover"
+                    />
+                    <Badge className="absolute top-3 left-3 z-10">Spiritual Journey</Badge>
+                  </div>
+                  <CardHeader>
+                    <CardTitle>Char Dham Yatra 2025</CardTitle>
+                    <CardDescription>View the sacred Yatra in Himalayas</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid grid-cols-2 gap-4 mb-4">
+                      <div className="flex items-center gap-2">
+                        <Clock className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm">10 Days</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Mountain className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm">Moderate</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Calendar className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm">Jun-Sep</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <MapPin className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm">Uttarakhand</span>
+                      </div>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-4">
+                    The Char Dham Yatra is one of the most sacred pilgrimage circuits in India, comprising four holy sites nestled in the Garhwal Himalayas.
+                    </p>
+                  </CardContent>
+                  <CardFooter>
+                    <Button asChild className="w-full">
+                      <Link href="/destinations/char-dham">View Details</Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+                {/* Temples of Manaskhand */}
+                <Card className="overflow-hidden">
+                  <div className="relative h-48 w-full">
+                    <Image
+                      src="/manaskhand/manaskhand.jpeg?height=400&width=600"
+                      alt="manaskhand"
+                      fill
+                      className="object-cover"
+                    />
+                    <Badge className="absolute top-3 left-3 z-10">Spiritual Journey</Badge>
+                  </div>
+                  <CardHeader>
+                    <CardTitle>Temples of Manaskhand</CardTitle>
+                    <CardDescription>Walk the ancient pilgrim paths of Manaskhand, discovering exquisitely carved stone temples nestled in orchid-filled valleys.</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid grid-cols-2 gap-4 mb-4">
+                      <div className="flex items-center gap-2">
+                        <Clock className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm">7 Days</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Mountain className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm">Moderate</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Calendar className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm">Jun-Sep</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <MapPin className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm">Uttarakhand</span>
+                      </div>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-4">
+                    This cultural trip reveals hidden gems like Jageshwar's 124 shrines, Golu Devta,
+                      Kasar Devi, Haat Kalika and the hilltop sanctuary of Binsar Mahadev.
+                    </p>
+                  </CardContent>
+                  <CardFooter>
+                    <Button asChild className="w-full">
+                      <Link href="/destinations/manaskhand">View Details</Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
 
                 {/* Rudranath Trek */}
                 <Card className="overflow-hidden">
                   <div className="relative h-48 w-full">
                     <Image
-                      src="/rudranath.jpg?height=400&width=600"
+                      src="/rudranath/rudranath.jpg?height=400&width=600"
                       alt="Rudranath Trek"
                       fill
                       className="object-cover"
@@ -396,7 +716,7 @@ export default function DestinationsPage() {
                     <div className="grid grid-cols-2 gap-4 mb-4">
                       <div className="flex items-center gap-2">
                         <Clock className="h-4 w-4 text-muted-foreground" />
-                        <span className="text-sm">5 Days</span>
+                        <span className="text-sm">6 Days</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <Mountain className="h-4 w-4 text-muted-foreground" />
@@ -427,7 +747,7 @@ export default function DestinationsPage() {
                 <Card className="overflow-hidden">
                   <div className="relative h-48 w-full">
                     <Image
-                      src="/kailash.jpeg?height=400&width=600"
+                      src="/adi/kailash.jpeg?height=400&width=600"
                       alt="Kailash Darshan"
                       fill
                       className="object-cover"
@@ -525,7 +845,7 @@ export default function DestinationsPage() {
                 <Card className="overflow-hidden">
                   <div className="relative h-48 w-full">
                     <Image
-                      src="/khaliya.jpg?height=400&width=600"
+                      src="/khaliya/khaliya.jpg?height=400&width=600"
                       alt="Khaliya Top"
                       fill
                       className="object-cover"
@@ -573,7 +893,7 @@ export default function DestinationsPage() {
                 <Card className="overflow-hidden">
                   <div className="relative h-48 w-full">
                     <Image
-                      src="/pindari.jpeg?height=400&width=600"
+                      src="/pindari/pindari.jpeg?height=400&width=600"
                       alt="Pindari Glacier"
                       fill
                       className="object-cover"
@@ -621,7 +941,7 @@ export default function DestinationsPage() {
                 <Card className="overflow-hidden">
                   <div className="relative h-48 w-full">
                     <Image
-                      src="/nandadevi.jpg?height=400&width=600"
+                      src="/nanda/nanda.jpeg?height=400&width=600"
                       alt="Nanda Devi Base Camp"
                       fill
                       className="object-cover"
@@ -636,7 +956,7 @@ export default function DestinationsPage() {
                     <div className="grid grid-cols-2 gap-4 mb-4">
                       <div className="flex items-center gap-2">
                         <Clock className="h-4 w-4 text-muted-foreground" />
-                        <span className="text-sm">5 Days</span>
+                        <span className="text-sm">6 Days</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <Mountain className="h-4 w-4 text-muted-foreground" />
@@ -658,7 +978,7 @@ export default function DestinationsPage() {
                   </CardContent>
                   <CardFooter>
                     <Button asChild className="w-full">
-                      <Link href="/destinations/nanda">View Details</Link>
+                      <Link href="/destinations/nanda-devi">View Details</Link>
                     </Button>
                   </CardFooter>
                 </Card>

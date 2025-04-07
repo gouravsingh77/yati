@@ -40,8 +40,8 @@ export default function TermsOfServicePage() {
         </ul>
         <p>
           All cancellation requests must be submitted in writing to{" "}
-          <Link href="mailto:bookings@yatidham.com" className="text-primary hover:underline">
-            bookings@yatidham.com
+          <Link href="mailto:yatidham1008@gmail.com" className="text-primary hover:underline">
+            yatidham1008@gmail.com
           </Link>
           .
         </p>
@@ -116,17 +116,17 @@ export default function TermsOfServicePage() {
         <p>If you have any questions about these Terms of Service, please contact us at:</p>
         <p>
           <strong>Email:</strong>{" "}
-          <Link href="mailto:legal@yatidham.com" className="text-primary hover:underline">
-            legal@yatidham.com
+          <Link href="mailto:yatidham1008@gmail.com" className="text-primary hover:underline">
+            yatidham1008@gmail.com
           </Link>
           <br />
           <strong>Phone:</strong>{" "}
-          <Link href="tel:+919876543210" className="text-primary hover:underline">
-            +91 98765 43210
+          <Link href="tel:+919259071008" className="text-primary hover:underline">
+          +91 9259071008
           </Link>
         </p>
 
-        <p className="text-sm text-muted-foreground mt-8">Last Updated: March 28, 2024</p>
+        <p className="text-sm text-muted-foreground mt-8">Last Updated: April 7, 202</p>
       </div>
     </div>
   )

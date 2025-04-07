@@ -110,17 +110,17 @@ export default function MilamGlacierPage() {
     ],
     upcomingDepartures: [
       {
-        date: "August 5, 2024",
+        date: "August 5, 2025",
         spotsLeft: 8,
         price: 13999,
       },
       {
-        date: "August 10, 2024",
+        date: "August 10, 2025",
         spotsLeft: 10,
         price: 13999,
       },
       {
-        date: "September 15, 2024",
+        date: "September 15, 2025",
         spotsLeft: 12,
         price: 13999,
       },
@@ -132,7 +132,7 @@ export default function MilamGlacierPage() {
       {/* Hero Section */}
       <section className="relative h-[50vh] w-full">
         <Image
-          src={destination.image || "/placeholder.svg"}
+          src={destination.image || "/himalayas.jpg"}
           alt={destination.title}
           fill
           className="object-cover brightness-75"
@@ -453,7 +453,7 @@ export default function MilamGlacierPage() {
             <Card className="overflow-hidden">
               <div className="relative h-48 w-full">
                 <Image
-                  src="/pindari.jpeg?height=400&width=600&text=Pindari+Glacier"
+                  src="/pindari/pindari.jpeg?height=400&width=600&text=Pindari+Glacier"
                   alt="Pindari Glacier"
                   fill
                   className="object-cover"
@@ -484,7 +484,7 @@ export default function MilamGlacierPage() {
             <Card className="overflow-hidden">
               <div className="relative h-48 w-full">
                 <Image
-                  src="/nandadevi.jpg?height=400&width=600&text=Nanda+Devi+Base+Camp"
+                  src="/nanda/nanda.jpeg?height=400&width=600&text=Nanda+Devi+Base+Camp"
                   alt="Nanda Devi Base Camp"
                   fill
                   className="object-cover"
@@ -515,7 +515,7 @@ export default function MilamGlacierPage() {
             <Card className="overflow-hidden">
               <div className="relative h-48 w-full">
                 <Image
-                  src="/khaliya.jpg?height=400&width=600&text=Khaliya+Top"
+                  src="/khaliya/khaliya.jpg?height=400&width=600&text=Khaliya+Top"
                   alt="Khaliya Top"
                   fill
                   className="object-cover"

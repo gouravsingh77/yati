@@ -10,7 +10,7 @@ export default function TestimonialsPage() {
       {/* Hero Section */}
       <section className="relative h-[50vh] w-full">
         <Image
-          src="/placeholder.svg?height=800&width=1600"
+          src="/himalayas.jpg?height=800&width=1600"
           alt="Himalayan Mountains"
           fill
           className="object-cover brightness-75"
@@ -54,7 +54,7 @@ export default function TestimonialsPage() {
                 <div className="flex items-center gap-4">
                   <div className="relative h-12 w-12 rounded-full overflow-hidden">
                     <Image
-                      src="/placeholder.svg?height=100&width=100"
+                      src="/client/rahul.jpg?height=100&width=100"
                       alt="Rahul Sharma"
                       fill
                       className="object-cover"
@@ -86,7 +86,7 @@ export default function TestimonialsPage() {
                 <div className="flex items-center gap-4">
                   <div className="relative h-12 w-12 rounded-full overflow-hidden">
                     <Image
-                      src="/placeholder.svg?height=100&width=100"
+                      src="/client/priya.jpg?height=100&width=100"
                       alt="Priya Patel"
                       fill
                       className="object-cover"
@@ -118,7 +118,7 @@ export default function TestimonialsPage() {
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="relative h-12 w-12 rounded-full overflow-hidden">
-                    <Image src="/placeholder.svg?height=100&width=100" alt="Amit Verma" fill className="object-cover" />
+                    <Image src="/client/amit.jpg?height=100&width=100" alt="Amit Verma" fill className="object-cover" />
                   </div>
                   <div>
                     <h4 className="font-semibold">Amit Verma</h4>
@@ -146,7 +146,7 @@ export default function TestimonialsPage() {
                 <div className="flex items-center gap-4">
                   <div className="relative h-12 w-12 rounded-full overflow-hidden">
                     <Image
-                      src="/placeholder.svg?height=100&width=100"
+                      src="/client/suresh.jpg?height=100&width=100"
                       alt="Suresh Kumar"
                       fill
                       className="object-cover"
@@ -178,7 +178,7 @@ export default function TestimonialsPage() {
                 <div className="flex items-center gap-4">
                   <div className="relative h-12 w-12 rounded-full overflow-hidden">
                     <Image
-                      src="/placeholder.svg?height=100&width=100"
+                      src="/client/meera.jpeg?height=100&width=100"
                       alt="Meera Joshi"
                       fill
                       className="object-cover"
@@ -211,7 +211,7 @@ export default function TestimonialsPage() {
                 <div className="flex items-center gap-4">
                   <div className="relative h-12 w-12 rounded-full overflow-hidden">
                     <Image
-                      src="/placeholder.svg?height=100&width=100"
+                      src="/client/vikram.jpg?height=100&width=100"
                       alt="Vikram Singh"
                       fill
                       className="object-cover"
@@ -228,7 +228,7 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
-      {/* Video Testimonials */}
+      {/* Video Testimonials 
       <section className="py-16 bg-muted">
         <div className="container px-4">
           <div className="text-center mb-12">
@@ -339,7 +339,7 @@ export default function TestimonialsPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Share Your Experience */}
       <section className="py-16">
@@ -352,11 +352,11 @@ export default function TestimonialsPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg">
-                <Link href="/contact?subject=My%20Testimonial">Submit Your Testimonial</Link>
+                <Link href="https://drive.google.com/drive/folders/1tOSBudCgm_ZB1Vt3-6zN0_aXRPUcYL3-?usp=sharing">Submit Your Testimonial</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
                 <Link
-                  href="https://wa.me/919876543210?text=I'd%20like%20to%20share%20my%20experience%20with%20Yati%20Dham"
+                  href="https://wa.me/919259071008?text=I'd%20like%20to%20share%20my%20experience%20with%20Yati%20Dham"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

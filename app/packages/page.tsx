@@ -40,7 +40,7 @@ export default function PackagesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card className="overflow-hidden">
               <div className="relative h-48 w-full">
-                <Image src="/adikailash.jpg?height=400&width=600" alt="Adi Kailash" fill className="object-cover" />
+                <Image src="/adi/adikailash.jpg?height=400&width=600" alt="Adi Kailash" fill className="object-cover" />
                 <Badge className="absolute top-3 left-3 z-10">Spiritual Journey</Badge>
               </div>
               <CardHeader>
@@ -162,7 +162,7 @@ export default function PackagesPage() {
 
             <Card className="overflow-hidden">
               <div className="relative h-48 w-full">
-                <Image src="/rudranath.jpg?height=400&width=600" alt="Rudranath Trek" fill className="object-cover" />
+                <Image src="/rudranath/rudranath.jpg?height=400&width=600" alt="Rudranath Trek" fill className="object-cover" />
                 <Badge className="absolute top-3 left-3 z-10">Spiritual Trek</Badge>
               </div>
               <CardHeader>
@@ -558,7 +558,7 @@ export default function PackagesPage() {
                       </div>
                       <div className="flex items-center gap-2">
                         <Clock className="h-4 w-4 text-muted-foreground" />
-                        <span className="text-sm">5 Days</span>
+                        <span className="text-sm">6 Days</span>
                       </div>
                     </div>
 
@@ -774,7 +774,7 @@ export default function PackagesPage() {
                     <div className="mb-4">
                       <div className="flex items-center gap-2 mb-2">
                         <IndianRupee className="h-5 w-5 text-primary" />
-                        <span className="text-xl font-bold">₹14,999</span>
+                        <span className="text-xl font-bold">₹15,999</span>
                         <span className="text-sm text-muted-foreground">per person</span>
                       </div>
                       <div className="flex items-center gap-2">
@@ -941,7 +941,7 @@ export default function PackagesPage() {
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-primary"
               >
-                <Link href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">
+                <Link href="https://wa.me/919259071008" target="_blank" rel="noopener noreferrer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"

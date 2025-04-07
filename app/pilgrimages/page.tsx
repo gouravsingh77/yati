@@ -84,7 +84,7 @@ export default function PilgrimagesPage() {
             {/* Adi Kailash Pilgrimage */}
             <Card className="overflow-hidden">
               <div className="relative h-48 w-full">
-                <Image src="/adi1.jpg?height=400&width=600" alt="Adi Kailash" fill className="object-cover" />
+                <Image src="/adi/adi1.jpg?height=400&width=600" alt="Adi Kailash" fill className="object-cover" />
                 <Badge className="absolute top-3 left-3 z-10">Most Popular</Badge>
               </div>
               <CardHeader>
@@ -112,7 +112,7 @@ export default function PilgrimagesPage() {
                     <p className="text-2xl font-bold">₹25,999</p>
                   </div>
                   <Button asChild>
-                    <Link href="/pilgrimages/adi-kailash">View Details</Link>
+                    <Link href="/destinations/adi-kailash">View Details</Link>
                   </Button>
                 </div>
               </CardContent>
@@ -121,7 +121,7 @@ export default function PilgrimagesPage() {
             {/* Char Dham Pilgrimage */}
             <Card className="overflow-hidden">
               <div className="relative h-48 w-full">
-                <Image src="/chardham.jpg?height=400&width=600" alt="Char Dham" fill className="object-cover" />
+                <Image src="/char/chardham.jpg?height=400&width=600" alt="Char Dham" fill className="object-cover" />
                 <Badge className="absolute top-3 left-3 z-10">Spiritual</Badge>
               </div>
               <CardHeader>
@@ -132,11 +132,11 @@ export default function PilgrimagesPage() {
                 <div className="space-y-3 mb-4">
                   <div className="flex items-center gap-2">
                     <Calendar className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-sm">9 Days | Next Departure: May 20, 2024</span>
+                    <span className="text-sm">10 Days | Next Departure: May 20, 2025</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <MapPin className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-sm">Rishikesh → Yamunotri → Gangotri → Kedarnath → Badrinath → Rishikesh </span>
+                    <span className="text-sm">Haridwar → Yamunotri → Gangotri → Kedarnath → Badrinath → Haridwar </span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Users className="h-4 w-4 text-muted-foreground" />
@@ -146,39 +146,39 @@ export default function PilgrimagesPage() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-sm text-muted-foreground">Starting from</p>
-                    <p className="text-2xl font-bold">₹32,999</p>
+                    <p className="text-2xl font-bold">₹31,999</p>
                   </div>
                   <Button asChild>
-                    <Link href="/pilgrimages/char-dham">View Details</Link>
+                    <Link href="/destinations/char-dham">View Details</Link>
                   </Button>
                 </div>
               </CardContent>
             </Card>
 
-            {/* Kailash Mansarovar */}
+            {/* Temples of Manaskhand */}
             <Card className="overflow-hidden">
               <div className="relative h-48 w-full">
                 <Image
-                  src="/Kailash.jpeg?height=400&width=600"
-                  alt="Kailash Mansarovar"
+                  src="/manaskhand/manaskhand.jpeg?height=400&width=600"
+                  alt="Temples of Manaskhandr"
                   fill
                   className="object-cover"
                 />
-                <Badge className="absolute top-3 left-3 z-10">Premium</Badge>
+                <Badge className="absolute top-3 left-3 z-10">Spiritual</Badge>
               </div>
               <CardHeader>
-                <CardTitle>Kailash Mansarovar Yatra</CardTitle>
-                <CardDescription>The ultimate pilgrimage to Mount Kailash and Lake Mansarovar</CardDescription>
+                <CardTitle>Temples of Manaskhand</CardTitle>
+                <CardDescription> A sacred pilgrimage through the mystical Kumaon Himalayas.</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-3 mb-4">
                   <div className="flex items-center gap-2">
                     <Calendar className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-sm">15 Days | Next Departure: July 10, 2024</span>
+                    <span className="text-sm">7 Days | Next Departure: May 15, 2025</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <MapPin className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-sm">Kathmandu → Kailash → Mansarovar → Kathmandu</span>
+                    <span className="text-sm">Kathgodam → Almora  → Bageshwar → Almora → Kathgodam</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Users className="h-4 w-4 text-muted-foreground" />
@@ -188,10 +188,10 @@ export default function PilgrimagesPage() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-sm text-muted-foreground">Starting from</p>
-                    <p className="text-2xl font-bold">₹1,25,000</p>
+                    <p className="text-2xl font-bold">₹14,999</p>
                   </div>
                   <Button asChild>
-                    <Link href="/pilgrimages/kailash-mansarovar">View Details</Link>
+                    <Link href="/destinations/manaskhand">View Details</Link>
                   </Button>
                 </div>
               </CardContent>
@@ -360,7 +360,7 @@ export default function PilgrimagesPage() {
                 <div className="flex flex-col items-center mb-4">
                   <div className="relative h-16 w-16 rounded-full overflow-hidden mb-4">
                     <Image
-                      src="/amit.jpg?height=100&width=100"
+                      src="/client/amit.jpg?height=100&width=100"
                       alt="Testimonial"
                       fill
                       className="object-cover"
@@ -382,7 +382,7 @@ export default function PilgrimagesPage() {
                 <div className="flex flex-col items-center mb-4">
                   <div className="relative h-16 w-16 rounded-full overflow-hidden mb-4">
                     <Image
-                      src="/priya.jpg?height=100&width=100"
+                      src="/client/priya.jpg?height=100&width=100"
                       alt="Testimonial"
                       fill
                       className="object-cover"
@@ -404,7 +404,7 @@ export default function PilgrimagesPage() {
                 <div className="flex flex-col items-center mb-4">
                   <div className="relative h-16 w-16 rounded-full overflow-hidden mb-4">
                     <Image
-                      src="/rahul.jpg?height=100&width=100"
+                      src="/client/rahul.jpg?height=100&width=100"
                       alt="Testimonial"
                       fill
                       className="object-cover"

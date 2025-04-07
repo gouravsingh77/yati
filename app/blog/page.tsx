@@ -32,7 +32,7 @@ export default function BlogPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px] rounded-lg overflow-hidden">
               <Image
-                src="/adi1.jpg?height=800&width=1200&text=Featured+Article"
+                src="/adi/adi1.jpg?height=800&width=1200&text=Featured+Article"
                 alt="Featured Article"
                 fill
                 className="object-cover"
@@ -79,7 +79,7 @@ export default function BlogPage() {
             <Card className="overflow-hidden">
               <div className="relative h-48 w-full">
                 <Image
-                  src="/pawan.png?height=400&width=600&text=Article+1"
+                  src="/client/priya.jpg?height=400&width=600&text=Article+1"
                   alt="Article 1"
                   fill
                   className="object-cover"
@@ -118,7 +118,7 @@ export default function BlogPage() {
             <Card className="overflow-hidden">
               <div className="relative h-48 w-full">
                 <Image
-                  src="/priya.jpg?height=400&width=600&text=Article+2"
+                  src="/client/amit.jpg?height=400&width=600&text=Article+2"
                   alt="Article 2"
                   fill
                   className="object-cover"
@@ -157,7 +157,7 @@ export default function BlogPage() {
             <Card className="overflow-hidden">
               <div className="relative h-48 w-full">
                 <Image
-                  src="/rahul.jpg?height=400&width=600&text=Article+3"
+                  src="/client/rahul.jpg?height=400&width=600&text=Article+3"
                   alt="Article 3"
                   fill
                   className="object-cover"
@@ -213,10 +213,10 @@ export default function BlogPage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            <Link href="/blog/category/travel-guides" className="group">
+            <Link href="/about" className="group">
               <div className="relative h-40 rounded-lg overflow-hidden">
                 <Image
-                  src="/pawan.png?height=300&width=400&text=Travel+Guides"
+                  src="/team/pawan.png?height=300&width=400&text=Travel+Guides"
                   alt="Travel Guides"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -227,10 +227,10 @@ export default function BlogPage() {
               </div>
             </Link>
 
-            <Link href="/blog/category/spiritual-journeys" className="group">
+            <Link href="/about" className="group">
               <div className="relative h-40 rounded-lg overflow-hidden">
                 <Image
-                  src="/rahul.jpg?height=300&width=400&text=Spiritual+Journeys"
+                  src="/client/rahul.jpg?height=300&width=400&text=Spiritual+Journeys"
                   alt="Spiritual Journeys"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -244,7 +244,7 @@ export default function BlogPage() {
             <Link href="/blog/category/adventure-stories" className="group">
               <div className="relative h-40 rounded-lg overflow-hidden">
                 <Image
-                  src="/amit.jpg?height=300&width=400&text=Adventure+Stories"
+                  src="/client/amit.jpg?height=300&width=400&text=Adventure+Stories"
                   alt="Adventure Stories"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -258,7 +258,7 @@ export default function BlogPage() {
             <Link href="/about" className="group">
               <div className="relative h-40 rounded-lg overflow-hidden">
                 <Image
-                  src="/nandadevi.jpg?height=300&width=400&text=Cultural+Insights"
+                  src="/nanda/nanda.jpeg?height=300&width=400&text=Cultural+Insights"
                   alt="Cultural Insights"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"

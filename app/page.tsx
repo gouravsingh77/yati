@@ -66,7 +66,7 @@ export default function Home() {
             <DestinationCard
               title="Adi Kailash & Om Parvat"
               description="A sacred pilgrimage to the divine abode of Lord Shiva"
-              image="/adikailash.jpg?height=400&width=600"
+              image="/adi/adikailash.jpg?height=400&width=600"
               category="Spiritual Journey"
               duration="6 Days"
               difficulty="Moderate"
@@ -85,9 +85,9 @@ export default function Home() {
             <DestinationCard
               title="Khaliya Top Trek"
               description="A perfect trek for beginners, Khaliya Top offers stunning views of Nanda Devi, Nanda Kot, and Panchachuli peaks from its beautiful meadows."
-              image="/khaliya.jpg?height=400&width=600"
+              image="/khaliya/khaliya.jpg?height=400&width=600"
               category="Adventure Trek"
-              duration="5 Days"
+              duration="4 Days"
               difficulty="Easy"
               href="/destinations/khaliya-top"
             />
@@ -155,7 +155,7 @@ export default function Home() {
           <FeaturedTrek
             title="Adi Kailash & Om Parvat Yatra"
             description="Embark on a spiritual journey to the sacred Adi Kailash and witness the divine Om symbol naturally formed on Om Parvat. This pilgrimage offers breathtaking views of the Himalayas and a profound spiritual experience."
-            image="/adi1.jpg?height=600&width=1200"
+            image="/adi/adi1.jpg?height=600&width=1200"
             duration="6 Days"
             difficulty="Moderate"
             price="₹25,999"
@@ -181,21 +181,21 @@ export default function Home() {
               name="Rahul Sharma"
               location="Delhi"
               quote="The Adi Kailash journey was life-changing. The guides were knowledgeable and the arrangements were perfect. Truly a spiritual experience!"
-              image="/rahul.jpg?height=100&width=100"
+              image="/client/rahul.jpg?height=100&width=100"
               rating={5}
             />
             <TestimonialCard
               name="Priya Patel"
               location="Mumbai"
               quote="As a solo female traveler, I felt completely safe and well taken care of. The zero waste policy is commendable and the views were breathtaking."
-              image="/priya.jpg?height=100&width=100"
+              image="/client/priya.jpg?height=100&width=100"
               rating={5}
             />
             <TestimonialCard
               name="Amit Verma"
               location="Bangalore"
               quote="The Milam Glacier trek was challenging but worth every step. The local guides shared fascinating stories and the food was amazing!"
-              image="/amit.jpg?height=100&width=100"
+              image="/client/amit.jpg?height=100&width=100"
               rating={4}
             />
           </div>
@@ -233,7 +233,7 @@ export default function Home() {
                   </Badge>
                 </div>
                 <Button asChild className="w-full">
-                  <Link href="/book/adi-kailash-june-2024">Book Now</Link>
+                  <Link href="/book/adi-kailash">Book Now</Link>
                 </Button>
               </div>
             </div>
@@ -252,7 +252,7 @@ export default function Home() {
                   </Badge>
                 </div>
                 <Button asChild className="w-full">
-                  <Link href="/book/milam-glacier-july-2024">Book Now</Link>
+                  <Link href="/book/milam-glacier">Book Now</Link>
                 </Button>
               </div>
             </div>
@@ -264,24 +264,24 @@ export default function Home() {
                   <span className="text-sm font-medium">May 15, 2025</span>
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Rudranath Trek</h3>
-                <p className="text-muted-foreground mb-4">5 Days | ₹11,999 per person</p>
+                <p className="text-muted-foreground mb-4">6 Days | ₹11,999 per person</p>
                 <div className="flex items-center gap-2 mb-4">
                   <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200">
                     4 Spots Left
                   </Badge>
                 </div>
                 <Button asChild className="w-full">
-                  <Link href="/book/rudranath-july-2024">Book Now</Link>
+                  <Link href="/book/rudranath">Book Now</Link>
                 </Button>
               </div>
             </div>
           </div>
-
+{/* Upcoming Departures 
           <div className="text-center mt-10">
             <Button asChild size="lg">
               <Link href="/departures">View All Departures</Link>
             </Button>
-          </div>
+          </div>*/}
         </div>
       </section>
 

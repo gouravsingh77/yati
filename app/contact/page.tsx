@@ -39,19 +39,30 @@ export default function ContactPage() {
                 below and our team will get back to you within 24 hours.
               </p>
 
-              <form className="space-y-6">
+              <form 
+                className="space-y-6" 
+                action="https://formsubmit.co/yatidham1008@gmail.com" 
+                method="POST"
+              >
+                {/* FormSubmit.co configuration */}
+                <input type="hidden" name="_subject" value="New Trek Inquiry from Website" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="text" name="_honey" style={{display: 'none'}} />
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium">
                       Full Name
                     </label>
-                    <Input id="name" placeholder="Your full name" required />
+                    <Input id="name" name="name" placeholder="Your full name" required />
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-sm font-medium">
                       Email Address
                     </label>
-                    <Input id="email" type="email" placeholder="Your email address" required />
+                    <Input id="email" type="email" name="email" placeholder="Your email address" required />
                   </div>
                 </div>
 
@@ -60,13 +71,13 @@ export default function ContactPage() {
                     <label htmlFor="phone" className="text-sm font-medium">
                       Phone Number
                     </label>
-                    <Input id="phone" placeholder="Your phone number" />
+                    <Input id="phone" name="phone" placeholder="Your phone number" />
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="interest" className="text-sm font-medium">
                       I'm Interested In
                     </label>
-                    <Select>
+                    <Select name="interest">
                       <SelectTrigger id="interest">
                         <SelectValue placeholder="Select an option" />
                       </SelectTrigger>
@@ -85,7 +96,13 @@ export default function ContactPage() {
                   <label htmlFor="message" className="text-sm font-medium">
                     Your Message
                   </label>
-                  <Textarea id="message" placeholder="Tell us about your travel plans or questions" rows={5} />
+                  <Textarea 
+                    id="message" 
+                    name="message" 
+                    placeholder="Tell us about your travel plans or questions" 
+                    rows={5} 
+                    required 
+                  />
                 </div>
 
                 <Button type="submit" size="lg" className="w-full md:w-auto">
@@ -279,4 +296,3 @@ export default function ContactPage() {
     </div>
   )
 }
-

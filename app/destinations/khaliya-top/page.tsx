@@ -111,12 +111,12 @@ export default function KhaliyaTopPage() {
         price: 7999,
       },
       {
-        date: "July 15, 2024",
+        date: "July 15, 2025",
         spotsLeft: 12,
         price: 7999,
       },
       {
-        date: "September 10, 2024",
+        date: "September 10, 2025",
         spotsLeft: 15,
         price: 7999,
       },
@@ -294,7 +294,7 @@ export default function KhaliyaTopPage() {
                           <p className="text-sm text-muted-foreground">{departure.spotsLeft} spots left</p>
                         </div>
                         <Button asChild size="sm">
-                          <Link href={`/book/milam-glacier-${departure.date.toLowerCase().replace(/\s+/g, "-")}`}>
+                          <Link href={`/book/khaliya-top-${departure.date.toLowerCase().replace(/\s+/g, "-")}`}>
                             Book Now
                           </Link>
                         </Button>
@@ -437,116 +437,112 @@ export default function KhaliyaTopPage() {
         </div>
       </section>
 
-      {/* Similar Destinations */}
-      <section className="py-16">
-        <div className="container px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Similar Destinations</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Explore other beginner-friendly treks in the Himalayas
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Card className="overflow-hidden">
-              <div className="relative h-48 w-full">
-                <Image
-                  src="/vally.jpeg?height=400&width=600&text=Valley+of+Flowers"
-                  alt="Valley of Flowers"
-                  fill
-                  className="object-cover"
-                />
-                <Badge className="absolute top-3 left-3 z-10">Easy Trek</Badge>
-              </div>
-              <CardHeader>
-                <CardTitle>Valley of Flowers Trek</CardTitle>
-                <CardDescription>
-                  Trek through a UNESCO World Heritage Site with thousands of alpine flowers
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center gap-2 mb-4">
-                  <Clock className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-sm">6 Days</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <p className="font-semibold">₹8,999</p>
-                  <Badge variant="outline">Easy-Moderate</Badge>
-                </div>
-              </CardContent>
-              <CardFooter>
-                <Button asChild className="w-full">
-                  <Link href="/destinations">View Details</Link>
-                </Button>
-              </CardFooter>
-            </Card>
-
-            <Card className="overflow-hidden">
-              <div className="relative h-48 w-full">
-                <Image
-                  src="/pindari.jpeg?height=400&width=600&text=Pindari+Glacier"
-                  alt="Pindari Glacier"
-                  fill
-                  className="object-cover"
-                />
-                <Badge className="absolute top-3 left-3 z-10">Moderate Trek</Badge>
-              </div>
-              <CardHeader>
-                <CardTitle>Pindari Glacier Trek</CardTitle>
-                <CardDescription>Trek to one of the most accessible glaciers in the Kumaon Himalayas</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center gap-2 mb-4">
-                  <Clock className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-sm">7 Days</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <p className="font-semibold">₹12,999</p>
-                  <Badge variant="outline">Moderate</Badge>
-                </div>
-              </CardContent>
-              <CardFooter>
-                <Button asChild className="w-full">
-                  <Link href="/destinations/pindari-glacier">View Details</Link>
-                </Button>
-              </CardFooter>
-            </Card>
-
-            <Card className="overflow-hidden">
-              <div className="relative h-48 w-full">
-                <Image
-                  src="/dayara.jpg?height=400&width=600&text=Dayara+Bugyal"
-                  alt="Dayara Bugyal"
-                  fill
-                  className="object-cover"
-                />
-                <Badge className="absolute top-3 left-3 z-10">Easy Trek</Badge>
-              </div>
-              <CardHeader>
-                <CardTitle>Dayara Bugyal Trek</CardTitle>
-                <CardDescription>
-                  Trek to one of the most beautiful high-altitude meadows in Uttarakhand
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center gap-2 mb-4">
-                  <Clock className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-sm">5 Days</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <p className="font-semibold">₹9,999</p>
-                  <Badge variant="outline">Easy</Badge>
-                </div>
-              </CardContent>
-              <CardFooter>
-                <Button asChild className="w-full">
-                  <Link href="/destinations">View Details</Link>
-                </Button>
-              </CardFooter>
-            </Card>
-          </div>
-        </div>
-      </section>
+     {/* Similar Destinations */}
+           <section className="py-16">
+             <div className="container px-4">
+               <div className="text-center mb-12">
+                 <h2 className="text-3xl font-bold mb-4">Similar Destinations</h2>
+                 <p className="text-muted-foreground max-w-2xl mx-auto">Explore other adventure treks in the Himalayas</p>
+               </div>
+     
+               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                 <Card className="overflow-hidden">
+                   <div className="relative h-48 w-full">
+                     <Image
+                       src="/pindari/pindari.jpeg?height=400&width=600&text=Pindari+Glacier"
+                       alt="Pindari Glacier"
+                       fill
+                       className="object-cover"
+                     />
+                     <Badge className="absolute top-3 left-3 z-10">Adventure Trek</Badge>
+                   </div>
+                   <CardHeader>
+                     <CardTitle>Pindari Glacier Trek</CardTitle>
+                     <CardDescription>Trek to one of the most accessible glaciers in the Kumaon Himalayas</CardDescription>
+                   </CardHeader>
+                   <CardContent>
+                     <div className="flex items-center gap-2 mb-4">
+                       <Clock className="h-4 w-4 text-muted-foreground" />
+                       <span className="text-sm">7 Days</span>
+                     </div>
+                     <div className="flex items-center justify-between">
+                       <p className="font-semibold">₹12,999</p>
+                       <Badge variant="outline">Moderate</Badge>
+                     </div>
+                   </CardContent>
+                   <CardFooter>
+                     <Button asChild className="w-full">
+                       <Link href="/destinations/pindari-glacier">View Details</Link>
+                     </Button>
+                   </CardFooter>
+                 </Card>
+     
+                 <Card className="overflow-hidden">
+                   <div className="relative h-48 w-full">
+                     <Image
+                       src="/nanda/nanda.jpeg?height=400&width=600&text=Nanda+Devi+Base+Camp"
+                       alt="Nanda Devi Base Camp"
+                       fill
+                       className="object-cover"
+                     />
+                     <Badge className="absolute top-3 left-3 z-10">Expedition</Badge>
+                   </div>
+                   <CardHeader>
+                     <CardTitle>Nanda Devi Base Camp</CardTitle>
+                     <CardDescription>Trek to the base of India's second-highest peak</CardDescription>
+                   </CardHeader>
+                   <CardContent>
+                     <div className="flex items-center gap-2 mb-4">
+                       <Clock className="h-4 w-4 text-muted-foreground" />
+                       <span className="text-sm">6 Days</span>
+                     </div>
+                     <div className="flex items-center justify-between">
+                       <p className="font-semibold">₹15,999</p>
+                       <Badge variant="outline">Challenging</Badge>
+                     </div>
+                   </CardContent>
+                   <CardFooter>
+                     <Button asChild className="w-full">
+                       <Link href="/destinations/nanda-devi">View Details</Link>
+                     </Button>
+                   </CardFooter>
+                 </Card>
+     
+                 <Card className="overflow-hidden">
+                   <div className="relative h-48 w-full">
+                     <Image
+                       src="/ranthan/ranthan.jpeg?height=400&width=600&text=ranthan+Top"
+                       alt="Ranthan Khrak"
+                       fill
+                       className="object-cover"
+                     />
+                     <Badge className="absolute top-3 left-3 z-10">Easy Trek</Badge>
+                   </div>
+                   <CardHeader>
+                     <CardTitle>Ranthan Khrak Trek</CardTitle>
+                     <CardDescription>
+                     Conquer the high-altitude meadows with breathtaking views of Nanda Devi and Trishul peaks
+                     </CardDescription>
+                   </CardHeader>
+                   <CardContent>
+                     <div className="flex items-center gap-2 mb-4">
+                       <Clock className="h-4 w-4 text-muted-foreground" />
+                       <span className="text-sm">5 Days</span>
+                     </div>
+                     <div className="flex items-center justify-between">
+                       <p className="font-semibold">₹9,999</p>
+                       <Badge variant="outline">Moderate</Badge>
+                     </div>
+                   </CardContent>
+                   <CardFooter>
+                     <Button asChild className="w-full">
+                       <Link href="/destinations/ranthan-khrak">View Details</Link>
+                     </Button>
+                   </CardFooter>
+                 </Card>
+               </div>
+             </div>
+           </section>
 
       {/* CTA Section */}
       <section className="py-16 bg-primary text-primary-foreground">

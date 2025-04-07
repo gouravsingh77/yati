@@ -60,11 +60,15 @@ export default function ServicesPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                    <span>Jageshwar Dham Pilgrimage</span>
+                    <span>Temples of Manaskhand</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                    <span>Kainchi Dham Visit</span>
+                    <span>Char Dham Yatra</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                    <span>Panch Kedar & Panch Kailash Yatra</span>
                   </li>
                 </ul>
               </CardContent>
@@ -100,6 +104,10 @@ export default function ServicesPage() {
                   <li className="flex items-start gap-2">
                     <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                     <span>Khaliya Top Trek</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                    <span>Ranthan Khrak Trek</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
