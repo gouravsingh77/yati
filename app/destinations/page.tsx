@@ -324,7 +324,7 @@ export default function DestinationsPage() {
                 <Card className="overflow-hidden">
                   <div className="relative h-48 w-full">
                     <Image
-                      src="/Panchachuli/Panchachuli.jpeg?height=400&width=600"
+                      src="/panchachuli/panchachuli.jpeg?height=400&width=600"
                       alt="Panchachuli"
                       fill
                       className="object-cover"
@@ -371,8 +371,8 @@ export default function DestinationsPage() {
                 <Card className="overflow-hidden">
                   <div className="relative h-48 w-full">
                     <Image
-                      src="/Ralam/Ralam1.jpeg?height=400&width=600"
-                      alt="Khaliya Top"
+                      src="/ralam/ralam1.jpeg?height=400&width=600"
+                      alt="Ralam"
                       fill
                       className="object-cover"
                     />
@@ -402,7 +402,7 @@ export default function DestinationsPage() {
                         <MapPin className="h-4 w-4 text-muted-foreground" />
                         <span className="text-sm">Uttarakhand</span>
                       </div>
-                    </div>
+                    </div> 
                     <p className="text-sm text-muted-foreground mb-4">
                     The Ralam Glacier trek takes you through pristine alpine meadows, dense rhododendron forests, and traditional Himalayan villages.
                      Marvel at panoramic views of Himalayan giants like Nanda Devi, Nanda Kot, and Hardeol.
@@ -418,7 +418,7 @@ export default function DestinationsPage() {
                 <Card className="overflow-hidden">
                   <div className="relative h-48 w-full">
                     <Image
-                      src="/Ranthan/Ranthan1.jpeg?height=400&width=600"
+                      src="/ranthan/ranthan.jpeg?height=400&width=600"
                       alt="Ranthan"
                       fill
                       className="object-cover"
