@@ -21,7 +21,7 @@ export default function BookingPage() {
   const trek = {
     title: "Panchachuli Base Camp",
     description: "Trek to the base of the magnificent five peaks of Panchachuli",
-    image: "/placeholder.svg?height=400&width=600&text=Panchachuli",
+    image: "/panchachuli/panchachuli.jpeg?height=400&width=600&text=Panchachuli",
     category: "Adventure Trek",
     duration: "8 Days",
     difficulty: "Moderate",
@@ -31,8 +31,8 @@ export default function BookingPage() {
     spotsLeft: 8,
     totalSpots: 15,
     bookingDeadline: "May 5, 2024",
-    departureFrom: "Dharchula, Uttarakhand",
-    returnTo: "Dharchula, Uttarakhand",
+    departureFrom: "Kathgodam, Uttarakhand",
+    returnTo: "Kathgodam, Uttarakhand",
   }
 
   const handleNextStep = () => {
@@ -252,7 +252,7 @@ export default function BookingPage() {
                     <div className="flex flex-col items-center">
                       <div className="bg-white p-4 rounded-lg shadow-md mb-4">
                         <Image
-                          src="/placeholder.svg?height=300&width=300&text=Google+Pay+QR"
+                          src="/qr.png?height=300&width=300&text=Google+Pay+QR"
                           alt="Google Pay QR Code"
                           width={250}
                           height={250}

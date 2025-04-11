@@ -323,7 +323,7 @@ export default function CharDhamYatraPage() {
                           <p className="text-sm text-muted-foreground">{departure.spotsLeft} spots left</p>
                         </div>
                         <Button asChild size="sm">
-                          <Link href={`/book/char-dham${departure.date.toLowerCase().replace(/\s+/g, "-")}`}>
+                        <Link href="/book/char-dham">
                             Book Now
                           </Link>
                         </Button>

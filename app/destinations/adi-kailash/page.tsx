@@ -301,7 +301,7 @@ export default function AdiKailashPage() {
                           <p className="text-sm text-muted-foreground">{departure.spotsLeft} spots left</p>
                         </div>
                         <Button asChild size="sm">
-                          <Link href={`/book/adi-kailash${departure.date.toLowerCase().replace(/\s+/g, "-")}`}>
+                          <Link href="/book/adi-kailash">
                             Book Now
                           </Link>
                         </Button>

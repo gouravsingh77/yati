@@ -13,26 +13,33 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { Badge } from "@/components/ui/badge"
 import { Check, AlertCircle, ArrowLeft } from "lucide-react"
 
-export default function BookingPage() {
+export default function ManaskhandBookingPage() {
   const [step, setStep] = useState(1)
   const [isProcessing, setIsProcessing] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
 
-  const trek = {
+  const pilgrimage = {
     title: "Temples of Manaskhand",
-    description: "A spiritual journey through the sacred temples of Kumaon region",
-    image: "/placeholder.svg?height=400&width=600&text=Manaskhand+Temples",
-    category: "Spiritual Journey",
-    duration: "8 Days",
-    difficulty: "Easy to Moderate",
-    startDate: "May 20, 2024",
-    endDate: "May 27, 2024",
-    price: 28999,
+    description: "A sacred journey through the ancient temples of Kumaon region, including Jageshwar, Bageshwar, and Chitai Golu Devta",
+    image: "/manaskhand/manaskhand.jpeg?height=400&width=600&text=Manaskhand+Temples",
+    category: "Spiritual Pilgrimage",
+    duration: "7 Days",
+    difficulty: "Easy",
+    startDate: "May 15, 2025",
+    endDate: "May 21, 2025",
+    price: 14999,
     spotsLeft: 12,
-    totalSpots: 20,
-    bookingDeadline: "May 5, 2024",
+    totalSpots: 25,
+    bookingDeadline: "May 10, 2025",
     departureFrom: "Kathgodam, Uttarakhand",
     returnTo: "Kathgodam, Uttarakhand",
+    temples: [
+      "Jageshwar Dham",
+      "Bageshwar Temple",
+      "Chitai Golu Devta",
+      "Binsar Mahadev",
+      "Patal Bhuvaneshwar"
+    ]
   }
 
   const handleNextStep = () => {
@@ -69,7 +76,7 @@ export default function BookingPage() {
           <div className="space-y-4">
             <Button asChild className="w-full">
               <Link
-                href="https://wa.me/919259071008?text=I've%20made%20the%20payment%20for%20my%20Temples%20of%20Manaskhand%20booking.%20Here's%20my%20screenshot."
+                href="https://wa.me/919259071008?text=I've%20made%20the%20payment%20for%20my%20Manaskhand%20Temples%20pilgrimage.%20Here's%20my%20screenshot."
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -115,8 +122,8 @@ export default function BookingPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="md:col-span-2">
               <div className="mb-8">
-                <h1 className="text-3xl font-bold mb-2">{trek.title}</h1>
-                <p className="text-muted-foreground">{trek.description}</p>
+                <h1 className="text-3xl font-bold mb-2">{pilgrimage.title}</h1>
+                <p className="text-muted-foreground">{pilgrimage.description}</p>
               </div>
 
               {step === 1 && (
@@ -180,16 +187,7 @@ export default function BookingPage() {
                             htmlFor="puja"
                             className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                           >
-                            Special puja arrangements (₹2,500 per person)
-                          </label>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <Checkbox id="photography" />
-                          <label
-                            htmlFor="photography"
-                            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                          >
-                            Photography service (₹5,000 for the entire journey)
+                            Special Puja Arrangements (₹5,000 per temple)
                           </label>
                         </div>
                         <div className="flex items-center space-x-2">
@@ -198,16 +196,25 @@ export default function BookingPage() {
                             htmlFor="guide"
                             className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                           >
-                            Personal guide with historical knowledge (₹8,000 for the entire journey)
+                            Expert Guide Service (₹3,000 per day)
+                          </label>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <Checkbox id="accomodation" />
+                          <label
+                            htmlFor="accomodation"
+                            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                          >
+                            Premium Accommodation Upgrade (₹7,000 total)
                           </label>
                         </div>
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="specialRequirements">Special Requirements or Medical Conditions</Label>
+                      <Label htmlFor="specialRequirements">Special Requirements or Dietary Restrictions</Label>
                       <Textarea
                         id="specialRequirements"
-                        placeholder="Please mention any special requirements or medical conditions we should be aware of"
+                        placeholder="Please mention any special requirements or dietary restrictions"
                       />
                     </div>
                     <div className="space-y-2">
@@ -240,8 +247,8 @@ export default function BookingPage() {
                       <h3 className="font-medium mb-2">Payment Instructions</h3>
                       <ol className="list-decimal list-inside space-y-2 text-sm text-muted-foreground">
                         <li>Scan the Google Pay QR code with your phone</li>
-                        <li>Enter the amount: ₹{trek.price}</li>
-                        <li>Add a note with your name and trek name</li>
+                        <li>Enter the amount: ₹{pilgrimage.price}</li>
+                        <li>Add a note with your name and pilgrimage name</li>
                         <li>Complete the payment</li>
                         <li>Take a screenshot of the payment confirmation</li>
                         <li>Click the "Complete Booking" button below</li>
@@ -252,7 +259,7 @@ export default function BookingPage() {
                     <div className="flex flex-col items-center">
                       <div className="bg-white p-4 rounded-lg shadow-md mb-4">
                         <Image
-                          src="/placeholder.svg?height=300&width=300&text=Google+Pay+QR"
+                          src="/qr.png?height=300&width=300&text=Google+Pay+QR"
                           alt="Google Pay QR Code"
                           width={250}
                           height={250}
@@ -296,54 +303,62 @@ export default function BookingPage() {
             <div>
               <Card>
                 <CardHeader>
-                  <CardTitle>Booking Summary</CardTitle>
+                  <CardTitle>Pilgrimage Summary</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="relative h-40 w-full rounded-md overflow-hidden">
-                    <Image src={trek.image || "/placeholder.svg"} alt={trek.title} fill className="object-cover" />
+                    <Image src={pilgrimage.image || "/placeholder.svg"} alt={pilgrimage.title} fill className="object-cover" />
                   </div>
                   <div>
-                    <h3 className="font-semibold">{trek.title}</h3>
-                    <Badge className="mt-1">{trek.category}</Badge>
+                    <h3 className="font-semibold">{pilgrimage.title}</h3>
+                    <Badge className="mt-1">{pilgrimage.category}</Badge>
                   </div>
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Duration:</span>
-                      <span>{trek.duration}</span>
+                      <span>{pilgrimage.duration}</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Departure Date:</span>
-                      <span>{trek.startDate}</span>
+                      <span>{pilgrimage.startDate}</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Return Date:</span>
-                      <span>{trek.endDate}</span>
+                      <span>{pilgrimage.endDate}</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Difficulty:</span>
-                      <span>{trek.difficulty}</span>
+                      <span>{pilgrimage.difficulty}</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Spots Left:</span>
                       <span>
-                        {trek.spotsLeft} of {trek.totalSpots}
+                        {pilgrimage.spotsLeft} of {pilgrimage.totalSpots}
                       </span>
+                    </div>
+                    <div className="pt-2">
+                      <p className="text-muted-foreground">Temples Included:</p>
+                      <ul className="list-disc list-inside mt-1">
+                        {pilgrimage.temples.map((temple, index) => (
+                          <li key={index} className="text-sm">{temple}</li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
                   <div className="border-t pt-4 mt-4">
                     <div className="flex justify-between font-semibold">
                       <span>Price per person:</span>
-                      <span>₹{trek.price.toLocaleString()}</span>
+                      <span>₹{pilgrimage.price.toLocaleString()}</span>
                     </div>
                   </div>
                 </CardContent>
                 <CardFooter className="flex flex-col">
                   <div className="w-full p-3 bg-primary/10 rounded-md mb-4">
-                    <p className="text-xs text-center">Booking deadline: {trek.bookingDeadline}</p>
+                    <p className="text-xs text-center">Booking deadline: {pilgrimage.bookingDeadline}</p>
                   </div>
                   <Button asChild variant="outline" size="sm" className="w-full">
                     <Link
-                      href="https://wa.me/919259071008?text=I'm%20interested%20in%20the%20Temples%20of%20Manaskhand%20journey.%20Can%20you%20provide%20more%20information?"
+                      href="https://wa.me/919259071008?text=I'm%20interested%20in%20the%20Manaskhand%20Temples%20pilgrimage.%20Can%20you%20provide%20more%20information?"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -376,4 +391,3 @@ export default function BookingPage() {
     </div>
   )
 }
-

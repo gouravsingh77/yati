@@ -17,27 +17,119 @@ export default function BookingPage() {
   const [step, setStep] = useState(1)
   const [isProcessing, setIsProcessing] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
+  const [errors, setErrors] = useState({})
+  
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    address: "",
+    participants: "1",
+    porters: false,
+    photography: false,
+    equipment: false,
+    specialRequirements: "",
+    referral: "social",
+    terms: false
+  })
 
   const trek = {
     title: "Nanda Devi East Base Camp",
-    description: "Trek to the base of India's second-highest peak",
+    description: "Trek to the base camp of India's second-highest peak",
     image: "/nanda/nanda.jpeg?height=400&width=600&text=Nanda+Devi",
-    category: "Expedition",
+    category: "Adventure Trek",
     duration: "6 Days",
-    difficulty: "Difficult",
+    difficulty: "Moderate",
     startDate: "Aug 20, 2025",
     endDate: "Aug 25, 2025",
     price: 15999,
-    spotsLeft: 6,
+    spotsLeft: 5,
     totalSpots: 12,
     bookingDeadline: "July 30, 2025",
     departureFrom: "Kathgodam, Uttarakhand",
     returnTo: "Kathgodam, Uttarakhand",
+    maxAltitude: "4,300m",
+  }
+
+  const validateStep1 = () => {
+    const newErrors = {}
+    if (!formData.firstName.trim()) newErrors.firstName = "First name is required"
+    if (!formData.lastName.trim()) newErrors.lastName = "Last name is required"
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required"
+    } else if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
+      newErrors.email = "Email is invalid"
+    }
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Phone number is required"
+    } else if (!/^\d{10}$/.test(formData.phone)) {
+      newErrors.phone = "Phone number must be 10 digits"
+    }
+    if (!formData.address.trim()) newErrors.address = "Address is required"
+    
+    setErrors(newErrors)
+    return Object.keys(newErrors).length === 0
+  }
+
+  const validateStep2 = () => {
+    const newErrors = {}
+    if (!formData.participants) newErrors.participants = "Please select number of participants"
+    if (!formData.referral) newErrors.referral = "Please tell us how you heard about us"
+    
+    setErrors(newErrors)
+    return Object.keys(newErrors).length === 0
+  }
+
+  const validateStep3 = () => {
+    const newErrors = {}
+    if (!formData.terms) newErrors.terms = "You must accept the terms and conditions"
+    
+    setErrors(newErrors)
+    return Object.keys(newErrors).length === 0
+  }
+
+  const handleInputChange = (e) => {
+    const { id, value, type, checked } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [id]: type === 'checkbox' ? checked : value
+    }))
+    // Clear error when user starts typing
+    if (errors[id]) {
+      setErrors(prev => {
+        const newErrors = {...prev}
+        delete newErrors[id]
+        return newErrors
+      })
+    }
+  }
+
+  const handleSelectChange = (id, value) => {
+    setFormData(prev => ({
+      ...prev,
+      [id]: value
+    }))
+    // Clear error when user selects an option
+    if (errors[id]) {
+      setErrors(prev => {
+        const newErrors = {...prev}
+        delete newErrors[id]
+        return newErrors
+      })
+    }
   }
 
   const handleNextStep = () => {
-    window.scrollTo(0, 0)
-    setStep(step + 1)
+    let isValid = false
+    
+    if (step === 1) isValid = validateStep1()
+    if (step === 2) isValid = validateStep2()
+    
+    if (isValid) {
+      window.scrollTo(0, 0)
+      setStep(step + 1)
+    }
   }
 
   const handlePrevStep = () => {
@@ -46,12 +138,78 @@ export default function BookingPage() {
   }
 
   const handlePayment = async () => {
+    if (!validateStep3()) return
+    
     setIsProcessing(true)
-    // Simulate payment processing
-    setTimeout(() => {
+    
+    try {
+      // Calculate total amount
+      let totalAmount = trek.price * parseInt(formData.participants)
+      if (formData.porters) totalAmount += 1200 * 6 * parseInt(formData.participants) // 6 days
+      if (formData.photography) totalAmount += 5000
+      if (formData.equipment) totalAmount += 3500
+
+      // Prepare email content
+      const emailContent = `
+        New Booking for ${trek.title}!
+        
+        Personal Information:
+        Name: ${formData.firstName} ${formData.lastName}
+        Email: ${formData.email}
+        Phone: ${formData.phone}
+        Address: ${formData.address}
+        
+        Booking Details:
+        Participants: ${formData.participants}
+        Porter Service: ${formData.porters ? 'Yes' : 'No'}
+        Photography Service: ${formData.photography ? 'Yes' : 'No'}
+        Equipment Rental: ${formData.equipment ? 'Yes' : 'No'}
+        Special Requirements: ${formData.specialRequirements || 'None'}
+        Referral Source: ${formData.referral}
+        
+        Payment Details:
+        Base Price: ₹${trek.price.toLocaleString()} x ${formData.participants} = ₹${(trek.price * parseInt(formData.participants)).toLocaleString()}
+        ${formData.porters ? `Porter Service: ₹1,200 x 6 days x ${formData.participants} = ₹${(1200 * 6 * parseInt(formData.participants)).toLocaleString()}\n` : ''}
+        ${formData.photography ? `Photography: ₹5,000\n` : ''}
+        ${formData.equipment ? `Equipment Rental: ₹3,500\n` : ''}
+        Total Amount: ₹${totalAmount.toLocaleString()}
+        
+        Trek Details:
+        Duration: ${trek.duration}
+        Dates: ${trek.startDate} to ${trek.endDate}
+        Departure: ${trek.departureFrom}
+        Max Altitude: ${trek.maxAltitude}
+      `
+
+      // Send email using FormSubmit
+      const response = await fetch("https://formsubmit.co/ajax/yatidham1008@gmail.com", {
+        method: "POST",
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+          phone: formData.phone,
+          message: emailContent,
+          _subject: `New Booking: ${formData.firstName} ${formData.lastName} - ${trek.title}`,
+          _template: "table"
+        })
+      })
+
+      const result = await response.json()
+      if (response.ok) {
+        setIsProcessing(false)
+        setIsSuccess(true)
+      } else {
+        throw new Error(result.message || 'Failed to submit form')
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error)
       setIsProcessing(false)
-      setIsSuccess(true)
-    }, 2000)
+      alert('There was an error submitting your booking. Please try again or contact us directly.')
+    }
   }
 
   return (
@@ -69,7 +227,7 @@ export default function BookingPage() {
           <div className="space-y-4">
             <Button asChild className="w-full">
               <Link
-                href="https://wa.me/919259071008?text=I've%20made%20the%20payment%20for%20my%20Nanda%20Devi%20East%20Base%20Camp%20booking.%20Here's%20my%20screenshot."
+                href={`https://wa.me/919259071008?text=I've%20made%20the%20payment%20for%20my%20${encodeURIComponent(trek.title)}%20booking.%20Here's%20my%20screenshot.%0A%0AName:%20${encodeURIComponent(formData.firstName + ' ' + formData.lastName)}%0AEmail:%20${encodeURIComponent(formData.email)}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -125,25 +283,61 @@ export default function BookingPage() {
                   <div className="space-y-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="firstName">First Name</Label>
-                        <Input id="firstName" placeholder="Enter your first name" />
+                        <Label htmlFor="firstName">First Name *</Label>
+                        <Input 
+                          id="firstName" 
+                          placeholder="Enter your first name" 
+                          value={formData.firstName}
+                          onChange={handleInputChange}
+                          className={errors.firstName ? "border-red-500" : ""}
+                        />
+                        {errors.firstName && <p className="text-sm text-red-500">{errors.firstName}</p>}
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="lastName">Last Name</Label>
-                        <Input id="lastName" placeholder="Enter your last name" />
+                        <Label htmlFor="lastName">Last Name *</Label>
+                        <Input 
+                          id="lastName" 
+                          placeholder="Enter your last name" 
+                          value={formData.lastName}
+                          onChange={handleInputChange}
+                          className={errors.lastName ? "border-red-500" : ""}
+                        />
+                        {errors.lastName && <p className="text-sm text-red-500">{errors.lastName}</p>}
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="email">Email Address</Label>
-                      <Input id="email" type="email" placeholder="Enter your email address" />
+                      <Label htmlFor="email">Email Address *</Label>
+                      <Input 
+                        id="email" 
+                        type="email" 
+                        placeholder="Enter your email address" 
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        className={errors.email ? "border-red-500" : ""}
+                      />
+                      {errors.email && <p className="text-sm text-red-500">{errors.email}</p>}
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="phone">Phone Number</Label>
-                      <Input id="phone" placeholder="Enter your phone number" />
+                      <Label htmlFor="phone">Phone Number *</Label>
+                      <Input 
+                        id="phone" 
+                        placeholder="Enter your phone number" 
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        className={errors.phone ? "border-red-500" : ""}
+                      />
+                      {errors.phone && <p className="text-sm text-red-500">{errors.phone}</p>}
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="address">Address</Label>
-                      <Textarea id="address" placeholder="Enter your address" />
+                      <Label htmlFor="address">Address *</Label>
+                      <Textarea 
+                        id="address" 
+                        placeholder="Enter your address" 
+                        value={formData.address}
+                        onChange={handleInputChange}
+                        className={errors.address ? "border-red-500" : ""}
+                      />
+                      {errors.address && <p className="text-sm text-red-500">{errors.address}</p>}
                     </div>
                   </div>
                   <Button className="mt-6" onClick={handleNextStep}>
@@ -157,9 +351,12 @@ export default function BookingPage() {
                   <h2 className="text-xl font-semibold mb-4">Booking Details</h2>
                   <div className="space-y-4">
                     <div className="space-y-2">
-                      <Label>Number of Participants</Label>
-                      <Select defaultValue="1">
-                        <SelectTrigger>
+                      <Label>Number of Participants *</Label>
+                      <Select 
+                        value={formData.participants} 
+                        onValueChange={(value) => handleSelectChange('participants', value)}
+                      >
+                        <SelectTrigger className={errors.participants ? "border-red-500" : ""}>
                           <SelectValue placeholder="Select number of participants" />
                         </SelectTrigger>
                         <SelectContent>
@@ -170,12 +367,17 @@ export default function BookingPage() {
                           <SelectItem value="5">5 People</SelectItem>
                         </SelectContent>
                       </Select>
+                      {errors.participants && <p className="text-sm text-red-500">{errors.participants}</p>}
                     </div>
                     <div className="space-y-2">
                       <Label>Do you need any additional services?</Label>
                       <div className="space-y-2">
                         <div className="flex items-center space-x-2">
-                          <Checkbox id="porters" />
+                          <Checkbox 
+                            id="porters" 
+                            checked={formData.porters}
+                            onCheckedChange={(checked) => handleSelectChange('porters', checked)}
+                          />
                           <label
                             htmlFor="porters"
                             className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -184,7 +386,11 @@ export default function BookingPage() {
                           </label>
                         </div>
                         <div className="flex items-center space-x-2">
-                          <Checkbox id="photography" />
+                          <Checkbox 
+                            id="photography" 
+                            checked={formData.photography}
+                            onCheckedChange={(checked) => handleSelectChange('photography', checked)}
+                          />
                           <label
                             htmlFor="photography"
                             className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -193,7 +399,11 @@ export default function BookingPage() {
                           </label>
                         </div>
                         <div className="flex items-center space-x-2">
-                          <Checkbox id="equipment" />
+                          <Checkbox 
+                            id="equipment" 
+                            checked={formData.equipment}
+                            onCheckedChange={(checked) => handleSelectChange('equipment', checked)}
+                          />
                           <label
                             htmlFor="equipment"
                             className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -208,12 +418,17 @@ export default function BookingPage() {
                       <Textarea
                         id="specialRequirements"
                         placeholder="Please mention any special requirements or medical conditions we should be aware of"
+                        value={formData.specialRequirements}
+                        onChange={handleInputChange}
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label>How did you hear about us?</Label>
-                      <Select defaultValue="social">
-                        <SelectTrigger>
+                      <Label>How did you hear about us? *</Label>
+                      <Select 
+                        value={formData.referral}
+                        onValueChange={(value) => handleSelectChange('referral', value)}
+                      >
+                        <SelectTrigger className={errors.referral ? "border-red-500" : ""}>
                           <SelectValue placeholder="Select an option" />
                         </SelectTrigger>
                         <SelectContent>
@@ -224,6 +439,7 @@ export default function BookingPage() {
                           <SelectItem value="other">Other</SelectItem>
                         </SelectContent>
                       </Select>
+                      {errors.referral && <p className="text-sm text-red-500">{errors.referral}</p>}
                     </div>
                   </div>
                   <Button className="mt-6" onClick={handleNextStep}>
@@ -271,21 +487,29 @@ export default function BookingPage() {
                       </p>
                     </div>
 
-                    <div className="flex items-center space-x-2 mb-4">
-                      <Checkbox id="terms" />
-                      <label htmlFor="terms" className="text-sm text-muted-foreground">
-                        I agree to the{" "}
-                        <Link href="/terms-of-service" className="text-primary hover:underline">
-                          Terms of Service
-                        </Link>{" "}
-                        and{" "}
-                        <Link href="/privacy-policy" className="text-primary hover:underline">
-                          Privacy Policy
-                        </Link>
-                      </label>
+                    <div className="flex items-start space-x-2 mb-4">
+                      <Checkbox 
+                        id="terms" 
+                        checked={formData.terms}
+                        onCheckedChange={(checked) => handleSelectChange('terms', checked)}
+                        className="mt-1"
+                      />
+                      <div>
+                        <label htmlFor="terms" className="text-sm text-muted-foreground">
+                          I agree to the{" "}
+                          <Link href="/terms-of-service" className="text-primary hover:underline">
+                            Terms of Service
+                          </Link>{" "}
+                          and{" "}
+                          <Link href="/privacy-policy" className="text-primary hover:underline">
+                            Privacy Policy
+                          </Link> *
+                        </label>
+                        {errors.terms && <p className="text-sm text-red-500">{errors.terms}</p>}
+                      </div>
                     </div>
 
-                    <Button className="w-full" onClick={handlePayment} disabled={isProcessing}>
+                    <Button className="w-full" onClick={handlePayment} disabled={isProcessing || !formData.terms}>
                       {isProcessing ? "Processing..." : "Complete Booking"}
                     </Button>
                   </div>
@@ -300,7 +524,7 @@ export default function BookingPage() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="relative h-40 w-full rounded-md overflow-hidden">
-                    <Image src={trek.image || "/nanda/nanda.jpeg"} alt={trek.title} fill className="object-cover" />
+                    <Image src={trek.image || "/placeholder.svg"} alt={trek.title} fill className="object-cover" />
                   </div>
                   <div>
                     <h3 className="font-semibold">{trek.title}</h3>
@@ -376,4 +600,3 @@ export default function BookingPage() {
     </div>
   )
 }
-

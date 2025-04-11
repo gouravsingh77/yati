@@ -302,7 +302,7 @@ export default function NandaDeviEastBaseCampPage() {
                           <p className="text-sm text-muted-foreground">{departure.spotsLeft} spots left</p>
                         </div>
                         <Button asChild size="sm">
-                          <Link href={`/book/nanda-devi${departure.date.toLowerCase().replace(/\s+/g, "-")}`}>
+                        <Link href="/book/nanda-devi">
                             Book Now
                           </Link>
                         </Button>

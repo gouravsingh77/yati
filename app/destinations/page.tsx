@@ -324,7 +324,7 @@ export default function DestinationsPage() {
                 <Card className="overflow-hidden">
                   <div className="relative h-48 w-full">
                     <Image
-                      src="/Panchachuli/Panchachuli1.jpeg?height=400&width=600"
+                      src="/Panchachuli/Panchachuli.jpeg?height=400&width=600"
                       alt="Panchachuli"
                       fill
                       className="object-cover"
@@ -371,7 +371,7 @@ export default function DestinationsPage() {
                 <Card className="overflow-hidden">
                   <div className="relative h-48 w-full">
                     <Image
-                      src="/Ralam/Ralam.jpeg?height=400&width=600"
+                      src="/Ralam/Ralam1.jpeg?height=400&width=600"
                       alt="Khaliya Top"
                       fill
                       className="object-cover"
@@ -418,7 +418,7 @@ export default function DestinationsPage() {
                 <Card className="overflow-hidden">
                   <div className="relative h-48 w-full">
                     <Image
-                      src="/Ranthan/Ranthan.jpeg?height=400&width=600"
+                      src="/Ranthan/Ranthan1.jpeg?height=400&width=600"
                       alt="Ranthan"
                       fill
                       className="object-cover"

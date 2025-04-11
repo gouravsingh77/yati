@@ -289,7 +289,7 @@ export default function PindariGlacierPage() {
                           <p className="text-sm text-muted-foreground">{departure.spotsLeft} spots left</p>
                         </div>
                         <Button asChild size="sm">
-                          <Link href={`/book/nanda-devi-${departure.date.toLowerCase().replace(/\s+/g, "-")}`}>
+                          <Link href={`/book/pindari-glacier${departure.date.toLowerCase().replace(/\s+/g, "-")}`}>
                             Book Now
                           </Link>
                         </Button>

@@ -304,7 +304,7 @@ export default function ManaskhandTemplesPage() {
                           <p className="text-sm text-muted-foreground">{departure.spotsLeft} spots left</p>
                         </div>
                         <Button asChild size="sm">
-                          <Link href={`/book/manaskhand${departure.date.toLowerCase().replace(/\s+/g, "-")}`}>
+                          <Link href="/book/manaskhand">
                             Book Now
                           </Link>
                         </Button>
@@ -570,9 +570,7 @@ export default function ManaskhandTemplesPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary">
-                <Link
-                  href={`/book/manaskhand-temples-${destination.upcomingDepartures[0].date.toLowerCase().replace(/\s+/g, "-")}`}
-                >
+              <Link href="/book/manaskhand">
                   Book Now
                 </Link>
               </Button>

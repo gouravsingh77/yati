@@ -307,7 +307,7 @@ export default function RudranathPage() {
                           <p className="text-sm text-muted-foreground">{departure.spotsLeft} spots left</p>
                         </div>
                         <Button asChild size="sm">
-                          <Link href={`/book/rudranath${departure.date.toLowerCase().replace(/\s+/g, "-")}`}>
+                        <Link href="/book/rudranath">
                             Book Now
                           </Link>
                         </Button>

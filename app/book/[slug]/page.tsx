@@ -49,7 +49,7 @@ export default function BookingPage({ params }: { params: { slug: string } }) {
     const destinationName = slug.split("-")[0]
 
     switch (destinationName) {
-      case "adikailash":
+      case "adi-kailash":
         return {
           title: "Adi Kailash & Om Parvat",
           description: "A sacred pilgrimage to the divine abode of Lord Shiva",
@@ -76,7 +76,7 @@ export default function BookingPage({ params }: { params: { slug: string } }) {
           duration: "5 Days",
           difficulty: "Moderate",
           startDate: "Aug 5, 2025",
-          endDate: "Aug 10, 2025",
+          endDate: "Aug 9, 2025",
           price: 13999,
           spotsLeft: 8,
           totalSpots: 15,
@@ -89,16 +89,16 @@ export default function BookingPage({ params }: { params: { slug: string } }) {
         return {
           title: "Khaliya Top Trek",
           description: "Experience panoramic views of the Himalayan peaks from this beautiful meadow",
-          image: "/khaliya/khaliya.jpeg?height=400&width=600&text=Khaliya+Top",
+          image: "/khaliya/khaliya.jpg?height=400&width=600&text=Khaliya+Top",
           category: "Easy Trek",
           duration: "4 Days",
           difficulty: "Easy",
           startDate: "May 25, 2025",
-          endDate: "May 29, 2025",
+          endDate: "May 28, 2025",
           price: 7999,
           spotsLeft: 10,
           totalSpots: 20,
-          bookingDeadline: "May 15, 2025",
+          bookingDeadline: "May 25, 2025",
           departureFrom: "Kathgodam, Uttarakhand",
           returnTo: "Kathgodam, Uttarakhand",
           maxAltitude: "3,500m",
@@ -121,7 +121,7 @@ export default function BookingPage({ params }: { params: { slug: string } }) {
           returnTo: "Kathgodam, Uttarakhand",
           maxAltitude: "3,660m",
         }
-      case "nandadevi":
+      case "nanda devi":
         return {
           title: "Nanda Devi East Base Camp",
           description: "Trek to the base camp of India's second-highest peak",
@@ -143,12 +143,12 @@ export default function BookingPage({ params }: { params: { slug: string } }) {
         return {
           title: "Panchachuli Base Camp Trek",
           description: "Trek to the base of the magnificent five peaks of Panchachuli",
-          image: "/himalayas.jpg?height=400&width=600&text=Panchachuli",
+          image: "/panchachuli/panchachuli.jpeg?height=400&width=600&text=Panchachuli",
           category: "Adventure Trek",
           duration: "5 Days",
           difficulty: "Moderate",
           startDate: "15 May, 2025",
-          endDate: "June 20, 2025",
+          endDate: "June 19, 2025",
           price: 9999,
           spotsLeft: 8,
           totalSpots: 15,
@@ -215,7 +215,7 @@ export default function BookingPage({ params }: { params: { slug: string } }) {
         return {
           title: "Char Dham Yatra",
           description: "Sacred pilgrimage to Yamunotri, Gangotri, Kedarnath, and Badrinath",
-          image: "/char/chaedham.jpg?height=400&width=600&text=Char+Dham",
+          image: "/char/chardham.jpg?height=400&width=600&text=Char+Dham",
           category: "Spiritual Journey",
           duration: "10 Days",
           difficulty: "Moderate",
@@ -224,40 +224,46 @@ export default function BookingPage({ params }: { params: { slug: string } }) {
           price: 31999,
           spotsLeft: 20,
           totalSpots: 40,
-          bookingDeadline: "April 5, 2025",
+          bookingDeadline: "April 25, 2025",
           departureFrom: "Haridwar, Uttarakhand",
           returnTo: "Haridwar, Uttarakhand",
           maxAltitude: "3,580m",
         }
       case "manaskhand":
         return {
-          title: "Temples of Manaskhand",
-          description: "Pilgrimage to the ancient temples of the Manaskhand region",
-          image: "/manaskhand/manaskhand.jpeg?height=400&width=600&text=Manaskhand",
-          category: "Spiritual Journey",
-          duration: "7 Days",
-          difficulty: "Easy to Moderate",
-          startDate: "May 15, 2025",
-          endDate: "May 21, 2025",
-          price: 14999,
-          spotsLeft: 15,
-          totalSpots: 30,
-          bookingDeadline: "May 5, 2025",
-          departureFrom: "Kathgodam, Uttarakhand",
-          returnTo: "Kathgodam, Uttarakhand",
-          maxAltitude: "2,500m",
+            title: "Temples of Manaskhand",
+            description: "A sacred journey through the ancient temples of Kumaon region, including Jageshwar, Bageshwar, and Chitai Golu Devta",
+            image: "/manaskhand-temples.jpg?height=400&width=600&text=Manaskhand+Temples",
+            category: "Spiritual Pilgrimage",
+            duration: "7 Days",
+            difficulty: "Easy",
+            startDate: "October 15, 2024",
+            endDate: "October 21, 2024",
+            price: 18999,
+            spotsLeft: 12,
+            totalSpots: 25,
+            bookingDeadline: "September 30, 2024",
+            departureFrom: "Kathgodam, Uttarakhand",
+            returnTo: "Kathgodam, Uttarakhand",
+            temples: [
+              "Jageshwar Dham",
+              "Bageshwar Temple",
+              "Chitai Golu Devta",
+              "Binsar Mahadev",
+              "Patal Bhuvaneshwar"
+            ]
         }
       default:
         return {
-          title: "Adi Kailash & Om Parvat",
-          description: "A sacred pilgrimage to the divine abode of Lord Shiva",
-          image: "/adi/adikailash.jpeg?height=400&width=600",
+          title: "Book your Journey",
+          description: "A journey of Adventure , pilgramage ",
+          image: "/adi/adikailash.jpg?height=400&width=600",
           category: "Spiritual Journey",
-          duration: "6 Days",
+          duration: "7 Days",
           difficulty: "Moderate",
-          startDate: "May 14, 2025",
-          endDate: "May 19, 2025",
-          price: 25999,
+          startDate: "May 15, 2025",
+          endDate: "May 21, 2025",
+          price: 14999,
           spotsLeft: 6,
           totalSpots: 15,
           bookingDeadline: "May 5, 2025",
